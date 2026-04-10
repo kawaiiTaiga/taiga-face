@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EVE</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 100%; height: 100%; overflow: hidden; background: #000; }
+  canvas { display: block; width: 100vw; height: 100vh; }
+</style>
+</head>
+<body>
+<canvas id="c"></canvas>
+<script>
+const vertexShaderSource = `#version 300 es
+in vec2 a_position;
+out vec2 v_uv;
+void main() {
+  v_uv = a_position * 0.5 + 0.5;
+  gl_Position = vec4(a_position, 0.0, 1.0);
+}`;
+
+const fragmentShaderSource = `#version 300 es
+precision highp float;
+
+in vec2 v_uv;
+out vec4 outColor;
+
+uniform vec2 u_resolution;
+uniform float u_time;
+uniform float u_glitch;
+
+uniform float u_left_lid_top;
+uniform float u_left_lid_bottom;
+uniform float u_left_tilt;
+uniform float u_left_width;
+uniform float u_right_lid_top;
+uniform float u_right_lid_bottom;
+uniform float u_right_tilt;
+uniform float u_right_width;
+
+uniform float u_spacing;
+uniform vec2 u_gaze;
+uniform float u_glow;
+uniform float u_warmth;
+
+mat2 rot(float a) {
+  float s = sin(a), c = cos(a);
+  return mat2(c, -s, s, c);
+}
+
+float hash21(vec2 p) {
+  p = fract(p * vec2(123.34, 345.45));
+  p += dot(p, p + 34.345);
+  return fract(p.x * p.y);
+}
+
+/* ─── EVE's eye: clean oval LED ─── */
+struct Eye {
+  float mask;
+  float glow;
+  float fill;
+};
+
+Eye renderEye(vec2 uv, float cx, float side, float lidTop, float lidBot, float tilt, float w, vec2 gaze) {
+  vec2 p = uv - vec2(side * cx, 0.0);
+  p = rot(-tilt * 0.5) * p;
+
+  /* simple oval — EVE's eyes are smooth ovals */
+  float rw = 0.10 * w;
+  float rh = 0.072;
+  vec2 q = p / vec2(rw, rh);
+
+  /* clean ellipse SDF */
+  float eDist = length(q) - 1.0;
+
+  /* eyelids — sharper arcs, strong brow tilt for angry cut */
+  float browT = tilt * q.x * 0.38;
+  float topArc    = mix(1.30, -0.80, clamp(lidTop, 0.0, 1.0))
+                  + pow(abs(q.x), 2.0) * 0.08 + browT;
+  float bottomArc = mix(-1.30, 0.80, clamp(lidBot, 0.0, 1.0))
+                  - pow(abs(q.x), 2.0) * 0.06 + browT * 0.20;
+
+  float topM    = 1.0 - smoothstep(topArc - 0.05, topArc + 0.05, q.y);
+  float bottomM = smoothstep(bottomArc - 0.05, bottomArc + 0.05, q.y);
+  float lidMask = topM * bottomM;
+
+  /* the eye shape */
+  float shape = 1.0 - smoothstep(-0.04, 0.04, eDist);
+  float visMask = shape * lidMask;
+
+  /* interior — slightly brighter at centre, falloff at edges = LED feel */
+  float interior = smoothstep(0.04, -0.06, eDist) * lidMask;
+  float centerBright = exp(-1.2 * dot(q, q));
+  float edgeFade = smoothstep(1.0, 0.3, length(q));
+
+  /* the LED fill — clean, uniform with subtle centre hotspot */
+  float fill = interior * (0.70 + centerBright * 0.30) * edgeFade;
+
+  /* soft outer glow — light bleeding onto visor */
+  float outerGlow = exp(-4.0 * max(eDist, 0.0)) * lidMask * 0.35;
+  /* wider ambient scatter */
+  float ambientGlow = exp(-1.8 * max(eDist, 0.0)) * lidMask * 0.08;
+
+  Eye e;
+  e.mask = visMask;
+  e.glow = outerGlow + ambientGlow;
+  e.fill = fill;
+  return e;
+}
+
+/* ─── scene — eyes only ─── */
+vec3 renderScene(vec2 uv) {
+  vec3 color = vec3(0.005, 0.006, 0.010);
+
+  /* ── EYES ── */
+  float spacingT = clamp((u_spacing - 0.2) / 0.8, 0.0, 1.0);
+  float eyeCX = mix(0.10, 0.18, spacingT);
+
+  vec3 eyeBlue = mix(
+    vec3(0.35, 0.78, 1.00),
+    vec3(0.45, 0.85, 1.00),
+    smoothstep(0.0, 1.0, u_warmth)
+  );
+
+  Eye L = renderEye(uv, eyeCX, -1.0, u_left_lid_top, u_left_lid_bottom, u_left_tilt, u_left_width, u_gaze);
+  Eye R = renderEye(uv, eyeCX,  1.0, u_right_lid_top, u_right_lid_bottom, u_right_tilt, u_right_width, u_gaze);
+
+  float glowAmt = u_glow;
+
+  /* LED fill */
+  color += eyeBlue * L.fill * (0.65 + glowAmt * 0.35) * 0.90;
+  color += eyeBlue * R.fill * (0.65 + glowAmt * 0.35) * 0.90;
+
+  /* close glow */
+  color += eyeBlue * L.glow * (0.5 + glowAmt * 0.5) * 0.45;
+  color += eyeBlue * R.glow * (0.5 + glowAmt * 0.5) * 0.45;
+
+  /* wide ambient scatter */
+  float ambL = exp(-4.0 * dot(uv - vec2(-eyeCX, 0.0), uv - vec2(-eyeCX, 0.0)));
+  float ambR = exp(-4.0 * dot(uv - vec2( eyeCX, 0.0), uv - vec2( eyeCX, 0.0)));
+  color += eyeBlue * (ambL + ambR) * 0.018 * glowAmt;
+
+  /* film grain */
+  float noise = hash21(gl_FragCoord.xy * 0.08 + floor(u_time * 16.0));
+  color += (noise - 0.5) * 0.003;
+
+  /* vignette */
+  float vig = 1.0 - smoothstep(0.40, 1.50, length(uv * vec2(0.75, 0.85)));
+  color *= vig;
+
+  return color;
+}
+
+void main() {
+  vec2 c = (gl_FragCoord.xy - 0.5 * u_resolution.xy) / min(u_resolution.x, u_resolution.y);
+
+  float split = u_glitch * 0.018;
+  vec3 color;
+  color.r = renderScene(c + vec2(split, 0.0)).r;
+  color.g = renderScene(c).g;
+  color.b = renderScene(c - vec2(split, 0.0)).b;
+
+  /* clean tone curve */
+  color = pow(color, vec3(0.96));
+
+  outColor = vec4(color, 1.0);
+}`;
+
+/* ─────── WebGL boilerplate ─────── */
+function createShader(gl, type, src) {
+  const s = gl.createShader(type);
+  gl.shaderSource(s, src);
+  gl.compileShader(s);
+  if (!gl.getShaderParameter(s, gl.COMPILE_STATUS)) {
+    console.error(gl.getShaderInfoLog(s)); gl.deleteShader(s); return null;
+  }
+  return s;
+}
+function createProgram(gl, vs, fs) {
+  const p = gl.createProgram();
+  gl.attachShader(p, vs); gl.attachShader(p, fs);
+  gl.linkProgram(p);
+  if (!gl.getProgramParameter(p, gl.LINK_STATUS)) {
+    console.error(gl.getProgramInfoLog(p)); return null;
+  }
+  gl.deleteShader(vs); gl.deleteShader(fs); return p;
+}
+
+const canvas = document.getElementById('c');
+const gl = canvas.getContext('webgl2', { antialias: true, alpha: false });
+const vs = createShader(gl, gl.VERTEX_SHADER, vertexShaderSource);
+const fs = createShader(gl, gl.FRAGMENT_SHADER, fragmentShaderSource);
+const program = createProgram(gl, vs, fs);
+gl.useProgram(program);
+
+const buf = gl.createBuffer();
+gl.bindBuffer(gl.ARRAY_BUFFER, buf);
+gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1,-1,1,-1,-1,1,-1,1,1,-1,1,1]), gl.STATIC_DRAW);
+const aPos = gl.getAttribLocation(program, 'a_position');
+gl.enableVertexAttribArray(aPos);
+gl.vertexAttribPointer(aPos, 2, gl.FLOAT, false, 0, 0);
+
+const u = {};
+['resolution','time','glitch',
+ 'left_lid_top','left_lid_bottom','left_tilt','left_width',
+ 'right_lid_top','right_lid_bottom','right_tilt','right_width',
+ 'spacing','gaze','glow','warmth'].forEach(n => {
+  u[n] = gl.getUniformLocation(program, 'u_' + n);
+});
+
+/* ─────── Animation ─────── */
+const face = {
+  left:  { lidTop: 0.10, lidBottom: 0.10, tilt: 0.0, width: 1.0 },
+  right: { lidTop: 0.10, lidBottom: 0.10, tilt: 0.0, width: 1.0 },
+  spacing: 0.5, gaze: [0, 0], glow: 0.80, warmth: 0.3
+};
+
+/* blink */
+let blinkTimer = 0, nextBlink = 3.0 + Math.random() * 3.0;
+let blinkPhase = -1;
+
+/* gaze — slow, deliberate like EVE */
+let gazeTarget = [0, 0], gazeSmooth = [0, 0];
+let gazeTimer = 0, nextGaze = 2.0 + Math.random() * 4.0;
+
+/* expressions — subtle, robotic but emotive */
+/* expressions — richer emotions
+   lT/lB = left lid top/bottom (higher = more closed)
+   lt/rt = left/right tilt (controls the diagonal "cut")
+     angry: lt negative + rt positive = inner edges drop = V brow
+     sad:   lt positive + rt negative = outer edges drop
+   w = warmth (colour temperature)
+*/
+const expressions = [
+  { name:'neutral',   lT:0.10, lB:0.10, rT:0.10, rB:0.10, lt: 0.00, rt: 0.00, w:0.30 },
+  { name:'happy',     lT:0.28, lB:0.20, rT:0.28, rB:0.20, lt: 0.12, rt:-0.12, w:0.55 },
+  { name:'angry',     lT:0.32, lB:0.06, rT:0.32, rB:0.06, lt:-0.28, rt: 0.28, w:0.12 },
+  { name:'curious',   lT:0.04, lB:0.06, rT:0.18, rB:0.10, lt:-0.06, rt: 0.02, w:0.30 },
+  { name:'sad',       lT:0.22, lB:0.16, rT:0.22, rB:0.16, lt: 0.20, rt:-0.20, w:0.42 },
+  { name:'surprised', lT:0.00, lB:0.00, rT:0.00, rB:0.00, lt: 0.00, rt: 0.00, w:0.22 },
+  { name:'soft',      lT:0.20, lB:0.16, rT:0.20, rB:0.16, lt: 0.08, rt:-0.08, w:0.50 },
+  { name:'skeptic',   lT:0.06, lB:0.06, rT:0.24, rB:0.10, lt:-0.10, rt: 0.16, w:0.25 },
+  { name:'love',      lT:0.26, lB:0.22, rT:0.26, rB:0.22, lt: 0.14, rt:-0.14, w:0.62 },
+  { name:'annoyed',   lT:0.28, lB:0.04, rT:0.28, rB:0.04, lt:-0.18, rt: 0.18, w:0.15 },
+  { name:'sleepy',    lT:0.48, lB:0.30, rT:0.50, rB:0.32, lt: 0.04, rt:-0.04, w:0.48 },
+  { name:'alert',     lT:0.02, lB:0.02, rT:0.02, rB:0.02, lt: 0.00, rt: 0.00, w:0.20 },
+  { name:'worried',   lT:0.12, lB:0.10, rT:0.12, rB:0.10, lt: 0.16, rt:-0.16, w:0.36 },
+  { name:'determined',lT:0.18, lB:0.04, rT:0.18, rB:0.04, lt:-0.10, rt: 0.10, w:0.18 },
+];
+
+let exprIdx = 0, exprTimer = 0, exprInterval = 2.8 + Math.random() * 2.5;
+let exprTransition = 1.0;
+
+function makeS(e) { return {lT:e.lT,lB:e.lB,rT:e.rT,rB:e.rB,lt:e.lt,rt:e.rt,w:e.w}; }
+let cur = makeS(expressions[0]), prev = makeS(expressions[0]), tgt = makeS(expressions[0]);
+
+function lerp(a, b, t) {
+  const s = t*t*(3-2*t);
+  const r = {};
+  for (const k in a) r[k] = a[k]+(b[k]-a[k])*s;
+  return r;
+}
+
+function breathe(t) { return 0.75 + 0.08*Math.sin(t*0.6) + 0.04*Math.sin(t*1.05); }
+
+function resize() {
+  const dpr = Math.min(devicePixelRatio||1, 2);
+  const w = Math.floor(canvas.clientWidth*dpr);
+  const h = Math.floor(canvas.clientHeight*dpr);
+  if (canvas.width!==w||canvas.height!==h) {
+    canvas.width=w; canvas.height=h; gl.viewport(0,0,w,h);
+  }
+}
+
+let lastTime = 0;
+function loop(ts) {
+  requestAnimationFrame(loop);
+  const t = ts*0.001, dt = Math.min(t-lastTime, 0.1);
+  lastTime = t;
+  resize();
+
+  /* blink */
+  blinkTimer += dt;
+  if (blinkPhase<0 && blinkTimer>nextBlink) {
+    blinkPhase=0; blinkTimer=0; nextBlink=2.5+Math.random()*4.0;
+  }
+  let bk = 0;
+  if (blinkPhase>=0) {
+    blinkPhase += dt*6.0;
+    if (blinkPhase<1.0) bk = Math.sin(blinkPhase*Math.PI);
+    else blinkPhase = -1;
+  }
+
+  /* gaze — slower, more deliberate */
+  gazeTimer += dt;
+  if (gazeTimer>nextGaze) {
+    gazeTarget = [(Math.random()-0.5)*0.45, (Math.random()-0.5)*0.20];
+    gazeTimer=0; nextGaze=2.0+Math.random()*4.0;
+  }
+  gazeSmooth[0] += (gazeTarget[0]-gazeSmooth[0])*dt*2.5;
+  gazeSmooth[1] += (gazeTarget[1]-gazeSmooth[1])*dt*2.5;
+
+  /* expression */
+  exprTimer += dt;
+  if (exprTimer>exprInterval) {
+    prev = {...cur};
+    exprIdx = (exprIdx+1)%expressions.length;
+    tgt = makeS(expressions[exprIdx]);
+    exprTransition=0; exprTimer=0;
+    exprInterval = 2.5+Math.random()*3.0;
+  }
+  if (exprTransition<1.0) {
+    exprTransition = Math.min(1.0, exprTransition+dt*0.65);
+    cur = lerp(prev, tgt, exprTransition);
+  }
+
+  const bl = bk*0.85;
+  face.left.lidTop     = cur.lT+bl;
+  face.left.lidBottom  = cur.lB+bl;
+  face.left.tilt       = cur.lt;
+  face.right.lidTop    = cur.rT+bl;
+  face.right.lidBottom = cur.rB+bl;
+  face.right.tilt      = cur.rt;
+  face.gaze            = gazeSmooth;
+  face.glow            = breathe(t) + cur.w * 0.06;
+  face.warmth          = cur.w;
+
+  /* render */
+  gl.uniform2f(u.resolution, canvas.width, canvas.height);
+  gl.uniform1f(u.time, t);
+  gl.uniform1f(u.glitch, 0.0);
+  gl.uniform1f(u.left_lid_top,    face.left.lidTop);
+  gl.uniform1f(u.left_lid_bottom, face.left.lidBottom);
+  gl.uniform1f(u.left_tilt,       face.left.tilt);
+  gl.uniform1f(u.left_width,      face.left.width);
+  gl.uniform1f(u.right_lid_top,    face.right.lidTop);
+  gl.uniform1f(u.right_lid_bottom, face.right.lidBottom);
+  gl.uniform1f(u.right_tilt,       face.right.tilt);
+  gl.uniform1f(u.right_width,      face.right.width);
+  gl.uniform1f(u.spacing, face.spacing);
+  gl.uniform2f(u.gaze, face.gaze[0], face.gaze[1]);
+  gl.uniform1f(u.glow, face.glow);
+  gl.uniform1f(u.warmth, face.warmth);
+  gl.drawArrays(gl.TRIANGLES, 0, 6);
+}
+requestAnimationFrame(loop);
+</script>
+</body>
+</html>

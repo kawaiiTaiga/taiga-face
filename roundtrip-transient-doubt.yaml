@@ -1,0 +1,17 @@
+behavior:
+  kind: transient
+  attack: 0.10
+  hold: 0.34
+  release: 1.20
+face:
+  mode: compact
+  openness: 0.73 + 0.015*sin(local_time * 4.8) - 0.03*(1.0 - decay(2.8))
+  squint: 0.26 + 0.06*env(0.08, 0.24, 0.95)
+  smile: 0.05 - 0.02*(1.0 - decay(3.4))
+  roundness: 0.10
+  slant: -0.16 + 0.025*decay(5.0)
+  asymmetry: 0.22 + 0.02*sin(local_time * 5.9)
+  spacing: 0.46
+  gaze: [0.16 + 0.03*env(0.08, 0.18, 0.9), -0.02 + 0.01*(1.0 - decay(3.2))]
+  glow: 0.9 + 0.05*env(0.10, 0.16, 0.75)
+  warmth: 0.24

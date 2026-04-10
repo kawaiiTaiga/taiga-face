@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EVE-Lite x HAMPTER</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <canvas id="eve-canvas" aria-label="EVE face canvas"></canvas>
+
+      <aside class="control-panel" id="control-panel">
+        <div class="panel-header">
+          <div>
+            <p class="eyebrow">Local Runtime</p>
+            <h1>EVE-Lite x HAMPTER</h1>
+          </div>
+          <button id="toggle-panel" class="ghost-button" type="button">Hide</button>
+        </div>
+
+        <section class="panel-section">
+          <div class="section-heading">
+            <h2>Presets</h2>
+            <span id="runtime-status" class="status-chip">Running</span>
+          </div>
+          <div id="preset-grid" class="preset-grid"></div>
+        </section>
+
+        <section class="panel-section">
+          <div class="section-heading">
+            <h2>Behavior DSL</h2>
+            <button id="apply-behavior" class="primary-button" type="button">Apply</button>
+          </div>
+          <textarea
+            id="dsl-input"
+            spellcheck="false"
+            autocomplete="off"
+            autocapitalize="off"
+            aria-label="Face DSL input"
+          ></textarea>
+          <p id="parse-message" class="helper-text">Paste YAML or JSON. `time`, `local_time`, trig, and transient envelope functions are evaluated every frame.</p>
+        </section>
+
+        <section class="panel-section">
+          <div class="section-heading">
+            <h2>Reactive Inputs</h2>
+            <button id="reset-inputs" class="ghost-button" type="button">Reset</button>
+          </div>
+          <label class="slider-row" for="energy-input">
+            <span>energy</span>
+            <input id="energy-input" type="range" min="0" max="1" step="0.01" value="0.2" />
+            <output id="energy-output">0.20</output>
+          </label>
+          <label class="slider-row" for="presence-input">
+            <span>presence</span>
+            <input id="presence-input" type="range" min="0" max="1" step="0.01" value="0.4" />
+            <output id="presence-output">0.40</output>
+          </label>
+          <label class="slider-row" for="arousal-input">
+            <span>arousal</span>
+            <input id="arousal-input" type="range" min="0" max="1" step="0.01" value="0.25" />
+            <output id="arousal-output">0.25</output>
+          </label>
+        </section>
+
+        <section class="panel-section compact">
+          <div class="section-heading">
+            <h2>Live Output</h2>
+            <button id="restore-idle" class="ghost-button" type="button">Restore Idle</button>
+          </div>
+          <pre id="live-output"></pre>
+        </section>
+      </aside>
+
+      <button id="show-panel" class="panel-toggle floating hidden" type="button">Controls</button>
+    </div>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
