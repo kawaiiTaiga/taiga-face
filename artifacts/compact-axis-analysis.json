@@ -1,0 +1,4134 @@
+{
+  "baseline": {
+    "vector": {
+      "openness": 0.65,
+      "squint": 0.12,
+      "smile": 0.12,
+      "roundness": 0.22,
+      "slant": 0,
+      "asymmetry": 0,
+      "spacing": 0.46,
+      "gaze_x": 0,
+      "gaze_y": -0.02,
+      "glow": 1,
+      "warmth": 0.3
+    },
+    "metrics": {
+      "areaApprox": 3.6147,
+      "meanThickness": 1.899,
+      "centerThickness": 1.8542,
+      "edgeThickness": 1.947,
+      "taperRatio": 1.0501,
+      "lowerDominance": -0.1807,
+      "meanSmileBias": 0,
+      "meanCenterline": -0.1778,
+      "intraThicknessAsymmetry": 0.1421,
+      "interEyeAreaDiff": 0,
+      "interEyeThicknessDiff": 0,
+      "interEyeCenterlineDiff": 0,
+      "interEyeLowerDominanceDiff": 0,
+      "signedInterEyeArea": 0,
+      "signedInterEyeThickness": 0,
+      "signedInterEyeCenterline": 0,
+      "signedInterEyeLowerDominance": 0
+    },
+    "lowLevel": {
+      "left": {
+        "lidTop": 0.2447,
+        "lidBottom": 0.064,
+        "upperInner": 0.288,
+        "upperOuter": 0.2014,
+        "lowerInner": 0.0618,
+        "lowerOuter": 0.0663,
+        "tilt": 0,
+        "width": 0.9542
+      },
+      "right": {
+        "lidTop": 0.2447,
+        "lidBottom": 0.064,
+        "upperInner": 0.288,
+        "upperOuter": 0.2014,
+        "lowerInner": 0.0618,
+        "lowerOuter": 0.0663,
+        "tilt": 0,
+        "width": 0.9542
+      },
+      "spacing": 0.46,
+      "gaze": [
+        0,
+        -0.02
+      ],
+      "glow": 1,
+      "warmth": 0.3
+    }
+  },
+  "axisSweeps": {
+    "openness": [
+      {
+        "value": 0.15,
+        "metrics": {
+          "areaApprox": 2.3085,
+          "meanThickness": 1.2128,
+          "centerThickness": 1.168,
+          "edgeThickness": 1.2608,
+          "taperRatio": 1.0795,
+          "lowerDominance": -0.4728,
+          "meanSmileBias": 0,
+          "meanCenterline": -0.4848,
+          "intraThicknessAsymmetry": 0.3163,
+          "interEyeAreaDiff": 0,
+          "interEyeThicknessDiff": 0,
+          "interEyeCenterlineDiff": 0,
+          "interEyeLowerDominanceDiff": 0,
+          "signedInterEyeArea": 0,
+          "signedInterEyeThickness": 0,
+          "signedInterEyeCenterline": 0,
+          "signedInterEyeLowerDominance": 0
+        },
+        "lowLevel": {
+          "left": {
+            "lidTop": 0.5543,
+            "lidBottom": 0.0816,
+            "upperInner": 0.648,
+            "upperOuter": 0.4606,
+            "lowerInner": 0.0793,
+            "lowerOuter": 0.0838,
+            "tilt": 0,
+            "width": 0.9466
+          },
+          "right": {
+            "lidTop": 0.5543,
+            "lidBottom": 0.0816,
+            "upperInner": 0.648,
+            "upperOuter": 0.4606,
+            "lowerInner": 0.0793,
+            "lowerOuter": 0.0838,
+            "tilt": 0,
+            "width": 0.9466
+          },
+          "spacing": 0.46,
+          "gaze": [
+            0,
+            -0.02
+          ],
+          "glow": 1,
+          "warmth": 0.3
+        }
+      },
+      {
+        "value": 0.35,
+        "metrics": {
+          "areaApprox": 2.831,
+          "meanThickness": 1.4873,
+          "centerThickness": 1.4425,
+          "edgeThickness": 1.5353,
+          "taperRatio": 1.0644,
+          "lowerDominance": -0.3559,
+          "meanSmileBias": 0,
+          "meanCenterline": -0.362,
+          "intraThicknessAsymmetry": 0.2466,
+          "interEyeAreaDiff": 0,
+          "interEyeThicknessDiff": 0,
+          "interEyeCenterlineDiff": 0,
+          "interEyeLowerDominanceDiff": 0,
+          "signedInterEyeArea": 0,
+          "signedInterEyeThickness": 0,
+          "signedInterEyeCenterline": 0,
+          "signedInterEyeLowerDominance": 0
+        },
+        "lowLevel": {
+          "left": {
+            "lidTop": 0.4305,
+            "lidBottom": 0.0746,
+            "upperInner": 0.504,
+            "upperOuter": 0.3569,
+            "lowerInner": 0.0723,
+            "lowerOuter": 0.0768,
+            "tilt": 0,
+            "width": 0.9496
+          },
+          "right": {
+            "lidTop": 0.4305,
+            "lidBottom": 0.0746,
+            "upperInner": 0.504,
+            "upperOuter": 0.3569,
+            "lowerInner": 0.0723,
+            "lowerOuter": 0.0768,
+            "tilt": 0,
+            "width": 0.9496
+          },
+          "spacing": 0.46,
+          "gaze": [
+            0,
+            -0.02
+          ],
+          "glow": 1,
+          "warmth": 0.3
+        }
+      },
+      {
+        "value": 0.55,
+        "metrics": {
+          "areaApprox": 3.3535,
+          "meanThickness": 1.7618,
+          "centerThickness": 1.7169,
+          "edgeThickness": 1.8098,
+          "taperRatio": 1.0541,
+          "lowerDominance": -0.2391,
+          "meanSmileBias": 0,
+          "meanCenterline": -0.2392,
+          "intraThicknessAsymmetry": 0.1769,
+          "interEyeAreaDiff": 0,
+          "interEyeThicknessDiff": 0,
+          "interEyeCenterlineDiff": 0,
+          "interEyeLowerDominanceDiff": 0,
+          "signedInterEyeArea": 0,
+          "signedInterEyeThickness": 0,
+          "signedInterEyeCenterline": 0,
+          "signedInterEyeLowerDominance": 0
+        },
+        "lowLevel": {
+          "left": {
+            "lidTop": 0.3066,
+            "lidBottom": 0.0675,
+            "upperInner": 0.36,
+            "upperOuter": 0.2532,
+            "lowerInner": 0.0653,
+            "lowerOuter": 0.0698,
+            "tilt": 0,
+            "width": 0.9526
+          },
+          "right": {
+            "lidTop": 0.3066,
+            "lidBottom": 0.0675,
+            "upperInner": 0.36,
+            "upperOuter": 0.2532,
+            "lowerInner": 0.0653,
+            "lowerOuter": 0.0698,
+            "tilt": 0,
+            "width": 0.9526
+          },
+          "spacing": 0.46,
+          "gaze": [
+            0,
+            -0.02
+          ],
+          "glow": 1,
+          "warmth": 0.3
+        }
+      },
+      {
+        "value": 0.75,
+        "metrics": {
+          "areaApprox": 3.876,
+          "meanThickness": 2.0362,
+          "centerThickness": 1.9914,
+          "edgeThickness": 2.0843,
+          "taperRatio": 1.0466,
+          "lowerDominance": -0.1222,
+          "meanSmileBias": 0,
+          "meanCenterline": -0.1164,
+          "intraThicknessAsymmetry": 0.1072,
+          "interEyeAreaDiff": 0,
+          "interEyeThicknessDiff": 0,
+          "interEyeCenterlineDiff": 0,
+          "interEyeLowerDominanceDiff": 0,
+          "signedInterEyeArea": 0,
+          "signedInterEyeThickness": 0,
+          "signedInterEyeCenterline": 0,
+          "signedInterEyeLowerDominance": 0
+        },
+        "lowLevel": {
+          "left": {
+            "lidTop": 0.1828,
+            "lidBottom": 0.0605,
+            "upperInner": 0.216,
+            "upperOuter": 0.1496,
+            "lowerInner": 0.0583,
+            "lowerOuter": 0.0628,
+            "tilt": 0,
+            "width": 0.9556
+          },
+          "right": {
+            "lidTop": 0.1828,
+            "lidBottom": 0.0605,
+            "upperInner": 0.216,
+            "upperOuter": 0.1496,
+            "lowerInner": 0.0583,
+            "lowerOuter": 0.0628,
+            "tilt": 0,
+            "width": 0.9556
+          },
+          "spacing": 0.46,
+          "gaze": [
+            0,
+            -0.02
+          ],
+          "glow": 1,
+          "warmth": 0.3
+        }
+      },
+      {
+        "value": 0.95,
+        "metrics": {
+          "areaApprox": 4.3985,
+          "meanThickness": 2.3107,
+          "centerThickness": 2.2659,
+          "edgeThickness": 2.3588,
+          "taperRatio": 1.041,
+          "lowerDominance": -0.0054,
+          "meanSmileBias": 0,
+          "meanCenterline": 0.0065,
+          "intraThicknessAsymmetry": 0.0375,
+          "interEyeAreaDiff": 0,
+          "interEyeThicknessDiff": 0,
+          "interEyeCenterlineDiff": 0,
+          "interEyeLowerDominanceDiff": 0,
+          "signedInterEyeArea": 0,
+          "signedInterEyeThickness": 0,
+          "signedInterEyeCenterline": 0,
+          "signedInterEyeLowerDominance": 0
+        },
+        "lowLevel": {
+          "left": {
+            "lidTop": 0.0589,
+            "lidBottom": 0.0536,
+            "upperInner": 0.072,
+            "upperOuter": 0.0459,
+            "lowerInner": 0.0513,
+            "lowerOuter": 0.0558,
+            "tilt": 0,
+            "width": 0.9587
+          },
+          "right": {
+            "lidTop": 0.0589,
+            "lidBottom": 0.0536,
+            "upperInner": 0.072,
+            "upperOuter": 0.0459,
+            "lowerInner": 0.0513,
+            "lowerOuter": 0.0558,
+            "tilt": 0,
+            "width": 0.9587
+          },
+          "spacing": 0.46,
+          "gaze": [
+            0,
+            -0.02
+          ],
+          "glow": 1,
+          "warmth": 0.3
+        }
+      }
+    ],
+    "squint": [
+      {
+        "value": 0,
+        "metrics": {
+          "areaApprox": 3.7576,
+          "meanThickness": 1.9741,
+          "centerThickness": 1.9292,
+          "edgeThickness": 2.0221,
+          "taperRatio": 1.0481,
+          "lowerDominance": -0.1615,
+          "meanSmileBias": 0,
+          "meanCenterline": -0.1575,
+          "intraThicknessAsymmetry": 0.1127,
+          "interEyeAreaDiff": 0,
+          "interEyeThicknessDiff": 0,
+          "interEyeCenterlineDiff": 0,
+          "interEyeLowerDominanceDiff": 0,
+          "signedInterEyeArea": 0,
+          "signedInterEyeThickness": 0,
+          "signedInterEyeCenterline": 0,
+          "signedInterEyeLowerDominance": 0
+        },
+        "lowLevel": {
+          "left": {
+            "lidTop": 0.2172,
+            "lidBottom": 0.0556,
+            "upperInner": 0.252,
+            "upperOuter": 0.1824,
+            "lowerInner": 0.0534,
+            "lowerOuter": 0.0579,
+            "tilt": 0,
+            "width": 0.9614
+          },
+          "right": {
+            "lidTop": 0.2172,
+            "lidBottom": 0.0556,
+            "upperInner": 0.252,
+            "upperOuter": 0.1824,
+            "lowerInner": 0.0534,
+            "lowerOuter": 0.0579,
+            "tilt": 0,
+            "width": 0.9614
+          },
+          "spacing": 0.46,
+          "gaze": [
+            0,
+            -0.02
+          ],
+          "glow": 1,
+          "warmth": 0.3
+        }
+      },
+      {
+        "value": 0.15,
+        "metrics": {
+          "areaApprox": 3.579,
+          "meanThickness": 1.8802,
+          "centerThickness": 1.8354,
+          "edgeThickness": 1.9283,
+          "taperRatio": 1.0506,
+          "lowerDominance": -0.1854,
+          "meanSmileBias": 0,
+          "meanCenterline": -0.1828,
+          "intraThicknessAsymmetry": 0.1494,
+          "interEyeAreaDiff": 0,
+          "interEyeThicknessDiff": 0,
+          "interEyeCenterlineDiff": 0,
+          "interEyeLowerDominanceDiff": 0,
+          "signedInterEyeArea": 0,
+          "signedInterEyeThickness": 0,
+          "signedInterEyeCenterline": 0,
+          "signedInterEyeLowerDominance": 0
+        },
+        "lowLevel": {
+          "left": {
+            "lidTop": 0.2516,
+            "lidBottom": 0.0661,
+            "upperInner": 0.297,
+            "upperOuter": 0.2062,
+            "lowerInner": 0.0639,
+            "lowerOuter": 0.0684,
+            "tilt": 0,
+            "width": 0.9524
+          },
+          "right": {
+            "lidTop": 0.2516,
+            "lidBottom": 0.0661,
+            "upperInner": 0.297,
+            "upperOuter": 0.2062,
+            "lowerInner": 0.0639,
+            "lowerOuter": 0.0684,
+            "tilt": 0,
+            "width": 0.9524
+          },
+          "spacing": 0.46,
+          "gaze": [
+            0,
+            -0.02
+          ],
+          "glow": 1,
+          "warmth": 0.3
+        }
+      },
+      {
+        "value": 0.35,
+        "metrics": {
+          "areaApprox": 3.3409,
+          "meanThickness": 1.7551,
+          "centerThickness": 1.7103,
+          "edgeThickness": 1.8032,
+          "taperRatio": 1.0543,
+          "lowerDominance": -0.2173,
+          "meanSmileBias": 0,
+          "meanCenterline": -0.2165,
+          "intraThicknessAsymmetry": 0.1984,
+          "interEyeAreaDiff": 0,
+          "interEyeThicknessDiff": 0,
+          "interEyeCenterlineDiff": 0,
+          "interEyeLowerDominanceDiff": 0,
+          "signedInterEyeArea": 0,
+          "signedInterEyeThickness": 0,
+          "signedInterEyeCenterline": 0,
+          "signedInterEyeLowerDominance": 0
+        },
+        "lowLevel": {
+          "left": {
+            "lidTop": 0.2974,
+            "lidBottom": 0.0801,
+            "upperInner": 0.357,
+            "upperOuter": 0.2378,
+            "lowerInner": 0.0779,
+            "lowerOuter": 0.0824,
+            "tilt": 0,
+            "width": 0.9404
+          },
+          "right": {
+            "lidTop": 0.2974,
+            "lidBottom": 0.0801,
+            "upperInner": 0.357,
+            "upperOuter": 0.2378,
+            "lowerInner": 0.0779,
+            "lowerOuter": 0.0824,
+            "tilt": 0,
+            "width": 0.9404
+          },
+          "spacing": 0.46,
+          "gaze": [
+            0,
+            -0.02
+          ],
+          "glow": 1,
+          "warmth": 0.3
+        }
+      },
+      {
+        "value": 0.55,
+        "metrics": {
+          "areaApprox": 3.1028,
+          "meanThickness": 1.63,
+          "centerThickness": 1.5852,
+          "edgeThickness": 1.6781,
+          "taperRatio": 1.0586,
+          "lowerDominance": -0.2491,
+          "meanSmileBias": 0,
+          "meanCenterline": -0.2502,
+          "intraThicknessAsymmetry": 0.2473,
+          "interEyeAreaDiff": 0,
+          "interEyeThicknessDiff": 0,
+          "interEyeCenterlineDiff": 0,
+          "interEyeLowerDominanceDiff": 0,
+          "signedInterEyeArea": 0,
+          "signedInterEyeThickness": 0,
+          "signedInterEyeCenterline": 0,
+          "signedInterEyeLowerDominance": 0
+        },
+        "lowLevel": {
+          "left": {
+            "lidTop": 0.3433,
+            "lidBottom": 0.0942,
+            "upperInner": 0.417,
+            "upperOuter": 0.2695,
+            "lowerInner": 0.0919,
+            "lowerOuter": 0.0964,
+            "tilt": 0,
+            "width": 0.9284
+          },
+          "right": {
+            "lidTop": 0.3433,
+            "lidBottom": 0.0942,
+            "upperInner": 0.417,
+            "upperOuter": 0.2695,
+            "lowerInner": 0.0919,
+            "lowerOuter": 0.0964,
+            "tilt": 0,
+            "width": 0.9284
+          },
+          "spacing": 0.46,
+          "gaze": [
+            0,
+            -0.02
+          ],
+          "glow": 1,
+          "warmth": 0.3
+        }
+      },
+      {
+        "value": 0.75,
+        "metrics": {
+          "areaApprox": 2.8646,
+          "meanThickness": 1.5049,
+          "centerThickness": 1.4601,
+          "edgeThickness": 1.553,
+          "taperRatio": 1.0636,
+          "lowerDominance": -0.281,
+          "meanSmileBias": 0,
+          "meanCenterline": -0.284,
+          "intraThicknessAsymmetry": 0.2963,
+          "interEyeAreaDiff": 0,
+          "interEyeThicknessDiff": 0,
+          "interEyeCenterlineDiff": 0,
+          "interEyeLowerDominanceDiff": 0,
+          "signedInterEyeArea": 0,
+          "signedInterEyeThickness": 0,
+          "signedInterEyeCenterline": 0,
+          "signedInterEyeLowerDominance": 0
+        },
+        "lowLevel": {
+          "left": {
+            "lidTop": 0.3891,
+            "lidBottom": 0.1081,
+            "upperInner": 0.477,
+            "upperOuter": 0.3012,
+            "lowerInner": 0.1059,
+            "lowerOuter": 0.1104,
+            "tilt": 0,
+            "width": 0.9163
+          },
+          "right": {
+            "lidTop": 0.3891,
+            "lidBottom": 0.1081,
+            "upperInner": 0.477,
+            "upperOuter": 0.3012,
+            "lowerInner": 0.1059,
+            "lowerOuter": 0.1104,
+            "tilt": 0,
+            "width": 0.9163
+          },
+          "spacing": 0.46,
+          "gaze": [
+            0,
+            -0.02
+          ],
+          "glow": 1,
+          "warmth": 0.3
+        }
+      }
+    ],
+    "smile": [
+      {
+        "value": 0,
+        "metrics": {
+          "areaApprox": 3.7696,
+          "meanThickness": 1.9803,
+          "centerThickness": 1.9355,
+          "edgeThickness": 2.0284,
+          "taperRatio": 1.048,
+          "lowerDominance": -0.2192,
+          "meanSmileBias": 0,
+          "meanCenterline": -0.2174,
+          "intraThicknessAsymmetry": 0.1498,
+          "interEyeAreaDiff": 0,
+          "interEyeThicknessDiff": 0,
+          "interEyeCenterlineDiff": 0,
+          "interEyeLowerDominanceDiff": 0,
+          "signedInterEyeArea": 0,
+          "signedInterEyeThickness": 0,
+          "signedInterEyeCenterline": 0,
+          "signedInterEyeLowerDominance": 0
+        },
+        "lowLevel": {
+          "left": {
+            "lidTop": 0.2442,
+            "lidBottom": 0.0251,
+            "upperInner": 0.288,
+            "upperOuter": 0.2004,
+            "lowerInner": 0.0246,
+            "lowerOuter": 0.0255,
+            "tilt": 0,
+            "width": 0.9542
+          },
+          "right": {
+            "lidTop": 0.2442,
+            "lidBottom": 0.0251,
+            "upperInner": 0.288,
+            "upperOuter": 0.2004,
+            "lowerInner": 0.0246,
+            "lowerOuter": 0.0255,
+            "tilt": 0,
+            "width": 0.9542
+          },
+          "spacing": 0.46,
+          "gaze": [
+            0,
+            -0.02
+          ],
+          "glow": 1,
+          "warmth": 0.3
+        }
+      },
+      {
+        "value": 0.2,
+        "metrics": {
+          "areaApprox": 3.5108,
+          "meanThickness": 1.8444,
+          "centerThickness": 1.7996,
+          "edgeThickness": 1.8924,
+          "taperRatio": 1.0516,
+          "lowerDominance": -0.1548,
+          "meanSmileBias": 0,
+          "meanCenterline": -0.1511,
+          "intraThicknessAsymmetry": 0.1369,
+          "interEyeAreaDiff": 0,
+          "interEyeThicknessDiff": 0,
+          "interEyeCenterlineDiff": 0,
+          "interEyeLowerDominanceDiff": 0,
+          "signedInterEyeArea": 0,
+          "signedInterEyeThickness": 0,
+          "signedInterEyeCenterline": 0,
+          "signedInterEyeLowerDominance": 0
+        },
+        "lowLevel": {
+          "left": {
+            "lidTop": 0.245,
+            "lidBottom": 0.0902,
+            "upperInner": 0.288,
+            "upperOuter": 0.202,
+            "lowerInner": 0.0868,
+            "lowerOuter": 0.0937,
+            "tilt": 0,
+            "width": 0.954
+          },
+          "right": {
+            "lidTop": 0.245,
+            "lidBottom": 0.0902,
+            "upperInner": 0.288,
+            "upperOuter": 0.202,
+            "lowerInner": 0.0868,
+            "lowerOuter": 0.0937,
+            "tilt": 0,
+            "width": 0.954
+          },
+          "spacing": 0.46,
+          "gaze": [
+            0,
+            -0.02
+          ],
+          "glow": 1,
+          "warmth": 0.3
+        }
+      },
+      {
+        "value": 0.4,
+        "metrics": {
+          "areaApprox": 2.8702,
+          "meanThickness": 1.5079,
+          "centerThickness": 1.4795,
+          "edgeThickness": 1.5356,
+          "taperRatio": 1.0379,
+          "lowerDominance": -0.074,
+          "meanSmileBias": 0.1096,
+          "meanCenterline": -0.0561,
+          "intraThicknessAsymmetry": 0.0906,
+          "interEyeAreaDiff": 0,
+          "interEyeThicknessDiff": 0,
+          "interEyeCenterlineDiff": 0,
+          "interEyeLowerDominanceDiff": 0,
+          "signedInterEyeArea": 0,
+          "signedInterEyeThickness": 0,
+          "signedInterEyeCenterline": 0,
+          "signedInterEyeLowerDominance": 0
+        },
+        "lowLevel": {
+          "left": {
+            "lidTop": 0.2458,
+            "lidBottom": 0.1718,
+            "upperInner": 0.288,
+            "upperOuter": 0.2036,
+            "lowerInner": 0.1638,
+            "lowerOuter": 0.1798,
+            "tilt": 0,
+            "width": 0.9359
+          },
+          "right": {
+            "lidTop": 0.2458,
+            "lidBottom": 0.1718,
+            "upperInner": 0.288,
+            "upperOuter": 0.2036,
+            "lowerInner": 0.1638,
+            "lowerOuter": 0.1798,
+            "tilt": 0,
+            "width": 0.9359
+          },
+          "spacing": 0.46,
+          "gaze": [
+            0,
+            -0.02
+          ],
+          "glow": 1,
+          "warmth": 0.3
+        }
+      },
+      {
+        "value": 0.7,
+        "metrics": {
+          "areaApprox": 1.3315,
+          "meanThickness": 0.6995,
+          "centerThickness": 0.726,
+          "edgeThickness": 0.66,
+          "taperRatio": 0.909,
+          "lowerDominance": 0.0958,
+          "meanSmileBias": 0.52,
+          "meanCenterline": 0.0694,
+          "intraThicknessAsymmetry": 0.0126,
+          "interEyeAreaDiff": 0,
+          "interEyeThicknessDiff": 0,
+          "interEyeCenterlineDiff": 0,
+          "interEyeLowerDominanceDiff": 0,
+          "signedInterEyeArea": 0,
+          "signedInterEyeThickness": 0,
+          "signedInterEyeCenterline": 0,
+          "signedInterEyeLowerDominance": 0
+        },
+        "lowLevel": {
+          "left": {
+            "lidTop": 0.2499,
+            "lidBottom": 0.3456,
+            "upperInner": 0.2904,
+            "upperOuter": 0.2093,
+            "lowerInner": 0.3285,
+            "lowerOuter": 0.3628,
+            "tilt": 0,
+            "width": 0.9058
+          },
+          "right": {
+            "lidTop": 0.2499,
+            "lidBottom": 0.3456,
+            "upperInner": 0.2904,
+            "upperOuter": 0.2093,
+            "lowerInner": 0.3285,
+            "lowerOuter": 0.3628,
+            "tilt": 0,
+            "width": 0.9058
+          },
+          "spacing": 0.46,
+          "gaze": [
+            0,
+            -0.02
+          ],
+          "glow": 1,
+          "warmth": 0.3
+        }
+      },
+      {
+        "value": 0.95,
+        "metrics": {
+          "areaApprox": 0.5303,
+          "meanThickness": 0.2786,
+          "centerThickness": 0.2396,
+          "edgeThickness": 0.2832,
+          "taperRatio": 1.1821,
+          "lowerDominance": 0.1963,
+          "meanSmileBias": 0.8474,
+          "meanCenterline": 0.0644,
+          "intraThicknessAsymmetry": 0.0211,
+          "interEyeAreaDiff": 0,
+          "interEyeThicknessDiff": 0,
+          "interEyeCenterlineDiff": 0,
+          "interEyeLowerDominanceDiff": 0,
+          "signedInterEyeArea": 0,
+          "signedInterEyeThickness": 0,
+          "signedInterEyeCenterline": 0,
+          "signedInterEyeLowerDominance": 0
+        },
+        "lowLevel": {
+          "left": {
+            "lidTop": 0.2523,
+            "lidBottom": 0.4486,
+            "upperInner": 0.2917,
+            "upperOuter": 0.213,
+            "lowerInner": 0.4271,
+            "lowerOuter": 0.4701,
+            "tilt": 0,
+            "width": 0.8347
+          },
+          "right": {
+            "lidTop": 0.2523,
+            "lidBottom": 0.4486,
+            "upperInner": 0.2917,
+            "upperOuter": 0.213,
+            "lowerInner": 0.4271,
+            "lowerOuter": 0.4701,
+            "tilt": 0,
+            "width": 0.8347
+          },
+          "spacing": 0.46,
+          "gaze": [
+            0,
+            -0.02
+          ],
+          "glow": 1,
+          "warmth": 0.3
+        }
+      }
+    ],
+    "roundness": [
+      {
+        "value": 0,
+        "metrics": {
+          "areaApprox": 3.632,
+          "meanThickness": 1.9081,
+          "centerThickness": 1.8632,
+          "edgeThickness": 1.9561,
+          "taperRatio": 1.0498,
+          "lowerDominance": -0.1851,
+          "meanSmileBias": 0,
+          "meanCenterline": -0.1823,
+          "intraThicknessAsymmetry": 0.1436,
+          "interEyeAreaDiff": 0,
+          "interEyeThicknessDiff": 0,
+          "interEyeCenterlineDiff": 0,
+          "interEyeLowerDominanceDiff": 0,
+          "signedInterEyeArea": 0,
+          "signedInterEyeThickness": 0,
+          "signedInterEyeCenterline": 0,
+          "signedInterEyeLowerDominance": 0
+        },
+        "lowLevel": {
+          "left": {
+            "lidTop": 0.2447,
+            "lidBottom": 0.0597,
+            "upperInner": 0.288,
+            "upperOuter": 0.2014,
+            "lowerInner": 0.0578,
+            "lowerOuter": 0.0615,
+            "tilt": 0,
+            "width": 1.0026
+          },
+          "right": {
+            "lidTop": 0.2447,
+            "lidBottom": 0.0597,
+            "upperInner": 0.288,
+            "upperOuter": 0.2014,
+            "lowerInner": 0.0578,
+            "lowerOuter": 0.0615,
+            "tilt": 0,
+            "width": 1.0026
+          },
+          "spacing": 0.46,
+          "gaze": [
+            0,
+            -0.02
+          ],
+          "glow": 1,
+          "warmth": 0.3
+        }
+      },
+      {
+        "value": 0.2,
+        "metrics": {
+          "areaApprox": 3.6163,
+          "meanThickness": 1.8998,
+          "centerThickness": 1.855,
+          "edgeThickness": 1.9479,
+          "taperRatio": 1.0501,
+          "lowerDominance": -0.1811,
+          "meanSmileBias": 0,
+          "meanCenterline": -0.1782,
+          "intraThicknessAsymmetry": 0.1422,
+          "interEyeAreaDiff": 0,
+          "interEyeThicknessDiff": 0,
+          "interEyeCenterlineDiff": 0,
+          "interEyeLowerDominanceDiff": 0,
+          "signedInterEyeArea": 0,
+          "signedInterEyeThickness": 0,
+          "signedInterEyeCenterline": 0,
+          "signedInterEyeLowerDominance": 0
+        },
+        "lowLevel": {
+          "left": {
+            "lidTop": 0.2447,
+            "lidBottom": 0.0636,
+            "upperInner": 0.288,
+            "upperOuter": 0.2014,
+            "lowerInner": 0.0614,
+            "lowerOuter": 0.0659,
+            "tilt": 0,
+            "width": 0.9586
+          },
+          "right": {
+            "lidTop": 0.2447,
+            "lidBottom": 0.0636,
+            "upperInner": 0.288,
+            "upperOuter": 0.2014,
+            "lowerInner": 0.0614,
+            "lowerOuter": 0.0659,
+            "tilt": 0,
+            "width": 0.9586
+          },
+          "spacing": 0.46,
+          "gaze": [
+            0,
+            -0.02
+          ],
+          "glow": 1,
+          "warmth": 0.3
+        }
+      },
+      {
+        "value": 0.4,
+        "metrics": {
+          "areaApprox": 3.6006,
+          "meanThickness": 1.8916,
+          "centerThickness": 1.8468,
+          "edgeThickness": 1.9396,
+          "taperRatio": 1.0503,
+          "lowerDominance": -0.1771,
+          "meanSmileBias": 0,
+          "meanCenterline": -0.1741,
+          "intraThicknessAsymmetry": 0.1409,
+          "interEyeAreaDiff": 0,
+          "interEyeThicknessDiff": 0,
+          "interEyeCenterlineDiff": 0,
+          "interEyeLowerDominanceDiff": 0,
+          "signedInterEyeArea": 0,
+          "signedInterEyeThickness": 0,
+          "signedInterEyeCenterline": 0,
+          "signedInterEyeLowerDominance": 0
+        },
+        "lowLevel": {
+          "left": {
+            "lidTop": 0.2447,
+            "lidBottom": 0.0677,
+            "upperInner": 0.288,
+            "upperOuter": 0.2014,
+            "lowerInner": 0.065,
+            "lowerOuter": 0.0703,
+            "tilt": 0,
+            "width": 0.9146
+          },
+          "right": {
+            "lidTop": 0.2447,
+            "lidBottom": 0.0677,
+            "upperInner": 0.288,
+            "upperOuter": 0.2014,
+            "lowerInner": 0.065,
+            "lowerOuter": 0.0703,
+            "tilt": 0,
+            "width": 0.9146
+          },
+          "spacing": 0.46,
+          "gaze": [
+            0,
+            -0.02
+          ],
+          "glow": 1,
+          "warmth": 0.3
+        }
+      },
+      {
+        "value": 0.7,
+        "metrics": {
+          "areaApprox": 3.5771,
+          "meanThickness": 1.8792,
+          "centerThickness": 1.8344,
+          "edgeThickness": 1.9273,
+          "taperRatio": 1.0506,
+          "lowerDominance": -0.1711,
+          "meanSmileBias": 0,
+          "meanCenterline": -0.1679,
+          "intraThicknessAsymmetry": 0.1388,
+          "interEyeAreaDiff": 0,
+          "interEyeThicknessDiff": 0,
+          "interEyeCenterlineDiff": 0,
+          "interEyeLowerDominanceDiff": 0,
+          "signedInterEyeArea": 0,
+          "signedInterEyeThickness": 0,
+          "signedInterEyeCenterline": 0,
+          "signedInterEyeLowerDominance": 0
+        },
+        "lowLevel": {
+          "left": {
+            "lidTop": 0.2447,
+            "lidBottom": 0.0736,
+            "upperInner": 0.288,
+            "upperOuter": 0.2014,
+            "lowerInner": 0.0704,
+            "lowerOuter": 0.0769,
+            "tilt": 0,
+            "width": 0.8486
+          },
+          "right": {
+            "lidTop": 0.2447,
+            "lidBottom": 0.0736,
+            "upperInner": 0.288,
+            "upperOuter": 0.2014,
+            "lowerInner": 0.0704,
+            "lowerOuter": 0.0769,
+            "tilt": 0,
+            "width": 0.8486
+          },
+          "spacing": 0.46,
+          "gaze": [
+            0,
+            -0.02
+          ],
+          "glow": 1,
+          "warmth": 0.3
+        }
+      },
+      {
+        "value": 1,
+        "metrics": {
+          "areaApprox": 3.5536,
+          "meanThickness": 1.8669,
+          "centerThickness": 1.822,
+          "edgeThickness": 1.9149,
+          "taperRatio": 1.051,
+          "lowerDominance": -0.1651,
+          "meanSmileBias": 0,
+          "meanCenterline": -0.1617,
+          "intraThicknessAsymmetry": 0.1368,
+          "interEyeAreaDiff": 0,
+          "interEyeThicknessDiff": 0,
+          "interEyeCenterlineDiff": 0,
+          "interEyeLowerDominanceDiff": 0,
+          "signedInterEyeArea": 0,
+          "signedInterEyeThickness": 0,
+          "signedInterEyeCenterline": 0,
+          "signedInterEyeLowerDominance": 0
+        },
+        "lowLevel": {
+          "left": {
+            "lidTop": 0.2447,
+            "lidBottom": 0.0796,
+            "upperInner": 0.288,
+            "upperOuter": 0.2014,
+            "lowerInner": 0.0759,
+            "lowerOuter": 0.0834,
+            "tilt": 0,
+            "width": 0.7826
+          },
+          "right": {
+            "lidTop": 0.2447,
+            "lidBottom": 0.0796,
+            "upperInner": 0.288,
+            "upperOuter": 0.2014,
+            "lowerInner": 0.0759,
+            "lowerOuter": 0.0834,
+            "tilt": 0,
+            "width": 0.7826
+          },
+          "spacing": 0.46,
+          "gaze": [
+            0,
+            -0.02
+          ],
+          "glow": 1,
+          "warmth": 0.3
+        }
+      }
+    ],
+    "slant": [
+      {
+        "value": -1,
+        "metrics": {
+          "areaApprox": 3.159,
+          "meanThickness": 1.6596,
+          "centerThickness": 1.6148,
+          "edgeThickness": 1.7076,
+          "taperRatio": 1.0575,
+          "lowerDominance": -0.2947,
+          "meanSmileBias": 0,
+          "meanCenterline": -0.2975,
+          "intraThicknessAsymmetry": 0.4221,
+          "interEyeAreaDiff": 0,
+          "interEyeThicknessDiff": 0,
+          "interEyeCenterlineDiff": 0,
+          "interEyeLowerDominanceDiff": 0,
+          "signedInterEyeArea": 0,
+          "signedInterEyeThickness": 0,
+          "signedInterEyeCenterline": 0,
+          "signedInterEyeLowerDominance": 0
+        },
+        "lowLevel": {
+          "left": {
+            "lidTop": 0.3587,
+            "lidBottom": 0.064,
+            "upperInner": 0.516,
+            "upperOuter": 0.2014,
+            "lowerInner": 0.0618,
+            "lowerOuter": 0.0663,
+            "tilt": 0.3,
+            "width": 0.9542
+          },
+          "right": {
+            "lidTop": 0.3587,
+            "lidBottom": 0.064,
+            "upperInner": 0.516,
+            "upperOuter": 0.2014,
+            "lowerInner": 0.0618,
+            "lowerOuter": 0.0663,
+            "tilt": -0.3,
+            "width": 0.9542
+          },
+          "spacing": 0.46,
+          "gaze": [
+            0,
+            -0.02
+          ],
+          "glow": 1,
+          "warmth": 0.3
+        }
+      },
+      {
+        "value": -0.5,
+        "metrics": {
+          "areaApprox": 3.3869,
+          "meanThickness": 1.7793,
+          "centerThickness": 1.7345,
+          "edgeThickness": 1.8273,
+          "taperRatio": 1.0535,
+          "lowerDominance": -0.2377,
+          "meanSmileBias": 0,
+          "meanCenterline": -0.2376,
+          "intraThicknessAsymmetry": 0.2821,
+          "interEyeAreaDiff": 0,
+          "interEyeThicknessDiff": 0,
+          "interEyeCenterlineDiff": 0,
+          "interEyeLowerDominanceDiff": 0,
+          "signedInterEyeArea": 0,
+          "signedInterEyeThickness": 0,
+          "signedInterEyeCenterline": 0,
+          "signedInterEyeLowerDominance": 0
+        },
+        "lowLevel": {
+          "left": {
+            "lidTop": 0.3017,
+            "lidBottom": 0.064,
+            "upperInner": 0.402,
+            "upperOuter": 0.2014,
+            "lowerInner": 0.0618,
+            "lowerOuter": 0.0663,
+            "tilt": 0.15,
+            "width": 0.9542
+          },
+          "right": {
+            "lidTop": 0.3017,
+            "lidBottom": 0.064,
+            "upperInner": 0.402,
+            "upperOuter": 0.2014,
+            "lowerInner": 0.0618,
+            "lowerOuter": 0.0663,
+            "tilt": -0.15,
+            "width": 0.9542
+          },
+          "spacing": 0.46,
+          "gaze": [
+            0,
+            -0.02
+          ],
+          "glow": 1,
+          "warmth": 0.3
+        }
+      },
+      {
+        "value": 0,
+        "metrics": {
+          "areaApprox": 3.6147,
+          "meanThickness": 1.899,
+          "centerThickness": 1.8542,
+          "edgeThickness": 1.947,
+          "taperRatio": 1.0501,
+          "lowerDominance": -0.1807,
+          "meanSmileBias": 0,
+          "meanCenterline": -0.1778,
+          "intraThicknessAsymmetry": 0.1421,
+          "interEyeAreaDiff": 0,
+          "interEyeThicknessDiff": 0,
+          "interEyeCenterlineDiff": 0,
+          "interEyeLowerDominanceDiff": 0,
+          "signedInterEyeArea": 0,
+          "signedInterEyeThickness": 0,
+          "signedInterEyeCenterline": 0,
+          "signedInterEyeLowerDominance": 0
+        },
+        "lowLevel": {
+          "left": {
+            "lidTop": 0.2447,
+            "lidBottom": 0.064,
+            "upperInner": 0.288,
+            "upperOuter": 0.2014,
+            "lowerInner": 0.0618,
+            "lowerOuter": 0.0663,
+            "tilt": 0,
+            "width": 0.9542
+          },
+          "right": {
+            "lidTop": 0.2447,
+            "lidBottom": 0.064,
+            "upperInner": 0.288,
+            "upperOuter": 0.2014,
+            "lowerInner": 0.0618,
+            "lowerOuter": 0.0663,
+            "tilt": 0,
+            "width": 0.9542
+          },
+          "spacing": 0.46,
+          "gaze": [
+            0,
+            -0.02
+          ],
+          "glow": 1,
+          "warmth": 0.3
+        }
+      },
+      {
+        "value": 0.5,
+        "metrics": {
+          "areaApprox": 3.3949,
+          "meanThickness": 1.7835,
+          "centerThickness": 1.7387,
+          "edgeThickness": 1.8315,
+          "taperRatio": 1.0534,
+          "lowerDominance": -0.2357,
+          "meanSmileBias": 0,
+          "meanCenterline": -0.2355,
+          "intraThicknessAsymmetry": 0.009,
+          "interEyeAreaDiff": 0,
+          "interEyeThicknessDiff": 0,
+          "interEyeCenterlineDiff": 0,
+          "interEyeLowerDominanceDiff": 0,
+          "signedInterEyeArea": 0,
+          "signedInterEyeThickness": 0,
+          "signedInterEyeCenterline": 0,
+          "signedInterEyeLowerDominance": 0
+        },
+        "lowLevel": {
+          "left": {
+            "lidTop": 0.2997,
+            "lidBottom": 0.064,
+            "upperInner": 0.288,
+            "upperOuter": 0.3114,
+            "lowerInner": 0.0618,
+            "lowerOuter": 0.0663,
+            "tilt": -0.15,
+            "width": 0.9542
+          },
+          "right": {
+            "lidTop": 0.2997,
+            "lidBottom": 0.064,
+            "upperInner": 0.288,
+            "upperOuter": 0.3114,
+            "lowerInner": 0.0618,
+            "lowerOuter": 0.0663,
+            "tilt": 0.15,
+            "width": 0.9542
+          },
+          "spacing": 0.46,
+          "gaze": [
+            0,
+            -0.02
+          ],
+          "glow": 1,
+          "warmth": 0.3
+        }
+      },
+      {
+        "value": 1,
+        "metrics": {
+          "areaApprox": 3.175,
+          "meanThickness": 1.668,
+          "centerThickness": 1.6232,
+          "edgeThickness": 1.716,
+          "taperRatio": 1.0572,
+          "lowerDominance": -0.2907,
+          "meanSmileBias": 0,
+          "meanCenterline": -0.2933,
+          "intraThicknessAsymmetry": 0.1241,
+          "interEyeAreaDiff": 0,
+          "interEyeThicknessDiff": 0,
+          "interEyeCenterlineDiff": 0,
+          "interEyeLowerDominanceDiff": 0,
+          "signedInterEyeArea": 0,
+          "signedInterEyeThickness": 0,
+          "signedInterEyeCenterline": 0,
+          "signedInterEyeLowerDominance": 0
+        },
+        "lowLevel": {
+          "left": {
+            "lidTop": 0.3547,
+            "lidBottom": 0.064,
+            "upperInner": 0.288,
+            "upperOuter": 0.4214,
+            "lowerInner": 0.0618,
+            "lowerOuter": 0.0663,
+            "tilt": -0.3,
+            "width": 0.9542
+          },
+          "right": {
+            "lidTop": 0.3547,
+            "lidBottom": 0.064,
+            "upperInner": 0.288,
+            "upperOuter": 0.4214,
+            "lowerInner": 0.0618,
+            "lowerOuter": 0.0663,
+            "tilt": 0.3,
+            "width": 0.9542
+          },
+          "spacing": 0.46,
+          "gaze": [
+            0,
+            -0.02
+          ],
+          "glow": 1,
+          "warmth": 0.3
+        }
+      }
+    ],
+    "asymmetry": [
+      {
+        "value": -0.5,
+        "metrics": {
+          "areaApprox": 3.6147,
+          "meanThickness": 1.899,
+          "centerThickness": 1.8542,
+          "edgeThickness": 1.947,
+          "taperRatio": 1.0503,
+          "lowerDominance": -0.1807,
+          "meanSmileBias": 0,
+          "meanCenterline": -0.1778,
+          "intraThicknessAsymmetry": 0.1421,
+          "interEyeAreaDiff": 0.4702,
+          "interEyeThicknessDiff": 0.247,
+          "interEyeCenterlineDiff": 0.1105,
+          "interEyeLowerDominanceDiff": 0.1052,
+          "signedInterEyeArea": 0.4702,
+          "signedInterEyeThickness": 0.247,
+          "signedInterEyeCenterline": 0.1105,
+          "signedInterEyeLowerDominance": 0.1052
+        },
+        "lowLevel": {
+          "left": {
+            "lidTop": 0.189,
+            "lidBottom": 0.0609,
+            "upperInner": 0.2232,
+            "upperOuter": 0.1548,
+            "lowerInner": 0.0587,
+            "lowerOuter": 0.0631,
+            "tilt": 0,
+            "width": 0.9555
+          },
+          "right": {
+            "lidTop": 0.3004,
+            "lidBottom": 0.0672,
+            "upperInner": 0.3528,
+            "upperOuter": 0.2481,
+            "lowerInner": 0.065,
+            "lowerOuter": 0.0694,
+            "tilt": 0,
+            "width": 0.9528
+          },
+          "spacing": 0.46,
+          "gaze": [
+            0,
+            -0.02
+          ],
+          "glow": 1,
+          "warmth": 0.3
+        }
+      },
+      {
+        "value": -0.25,
+        "metrics": {
+          "areaApprox": 3.6147,
+          "meanThickness": 1.899,
+          "centerThickness": 1.8542,
+          "edgeThickness": 1.947,
+          "taperRatio": 1.0501,
+          "lowerDominance": -0.1807,
+          "meanSmileBias": 0,
+          "meanCenterline": -0.1778,
+          "intraThicknessAsymmetry": 0.1421,
+          "interEyeAreaDiff": 0.2351,
+          "interEyeThicknessDiff": 0.1235,
+          "interEyeCenterlineDiff": 0.0553,
+          "interEyeLowerDominanceDiff": 0.0526,
+          "signedInterEyeArea": 0.2351,
+          "signedInterEyeThickness": 0.1235,
+          "signedInterEyeCenterline": 0.0553,
+          "signedInterEyeLowerDominance": 0.0526
+        },
+        "lowLevel": {
+          "left": {
+            "lidTop": 0.2168,
+            "lidBottom": 0.0625,
+            "upperInner": 0.2556,
+            "upperOuter": 0.1781,
+            "lowerInner": 0.0602,
+            "lowerOuter": 0.0647,
+            "tilt": 0,
+            "width": 0.9548
+          },
+          "right": {
+            "lidTop": 0.2726,
+            "lidBottom": 0.0656,
+            "upperInner": 0.3204,
+            "upperOuter": 0.2247,
+            "lowerInner": 0.0634,
+            "lowerOuter": 0.0679,
+            "tilt": 0,
+            "width": 0.9535
+          },
+          "spacing": 0.46,
+          "gaze": [
+            0,
+            -0.02
+          ],
+          "glow": 1,
+          "warmth": 0.3
+        }
+      },
+      {
+        "value": 0,
+        "metrics": {
+          "areaApprox": 3.6147,
+          "meanThickness": 1.899,
+          "centerThickness": 1.8542,
+          "edgeThickness": 1.947,
+          "taperRatio": 1.0501,
+          "lowerDominance": -0.1807,
+          "meanSmileBias": 0,
+          "meanCenterline": -0.1778,
+          "intraThicknessAsymmetry": 0.1421,
+          "interEyeAreaDiff": 0,
+          "interEyeThicknessDiff": 0,
+          "interEyeCenterlineDiff": 0,
+          "interEyeLowerDominanceDiff": 0,
+          "signedInterEyeArea": 0,
+          "signedInterEyeThickness": 0,
+          "signedInterEyeCenterline": 0,
+          "signedInterEyeLowerDominance": 0
+        },
+        "lowLevel": {
+          "left": {
+            "lidTop": 0.2447,
+            "lidBottom": 0.064,
+            "upperInner": 0.288,
+            "upperOuter": 0.2014,
+            "lowerInner": 0.0618,
+            "lowerOuter": 0.0663,
+            "tilt": 0,
+            "width": 0.9542
+          },
+          "right": {
+            "lidTop": 0.2447,
+            "lidBottom": 0.064,
+            "upperInner": 0.288,
+            "upperOuter": 0.2014,
+            "lowerInner": 0.0618,
+            "lowerOuter": 0.0663,
+            "tilt": 0,
+            "width": 0.9542
+          },
+          "spacing": 0.46,
+          "gaze": [
+            0,
+            -0.02
+          ],
+          "glow": 1,
+          "warmth": 0.3
+        }
+      },
+      {
+        "value": 0.25,
+        "metrics": {
+          "areaApprox": 3.6147,
+          "meanThickness": 1.899,
+          "centerThickness": 1.8542,
+          "edgeThickness": 1.947,
+          "taperRatio": 1.0501,
+          "lowerDominance": -0.1807,
+          "meanSmileBias": 0,
+          "meanCenterline": -0.1778,
+          "intraThicknessAsymmetry": 0.1421,
+          "interEyeAreaDiff": 0.2351,
+          "interEyeThicknessDiff": 0.1235,
+          "interEyeCenterlineDiff": 0.0553,
+          "interEyeLowerDominanceDiff": 0.0526,
+          "signedInterEyeArea": -0.2351,
+          "signedInterEyeThickness": -0.1235,
+          "signedInterEyeCenterline": -0.0553,
+          "signedInterEyeLowerDominance": -0.0526
+        },
+        "lowLevel": {
+          "left": {
+            "lidTop": 0.2726,
+            "lidBottom": 0.0656,
+            "upperInner": 0.3204,
+            "upperOuter": 0.2247,
+            "lowerInner": 0.0634,
+            "lowerOuter": 0.0679,
+            "tilt": 0,
+            "width": 0.9535
+          },
+          "right": {
+            "lidTop": 0.2168,
+            "lidBottom": 0.0625,
+            "upperInner": 0.2556,
+            "upperOuter": 0.1781,
+            "lowerInner": 0.0602,
+            "lowerOuter": 0.0647,
+            "tilt": 0,
+            "width": 0.9548
+          },
+          "spacing": 0.46,
+          "gaze": [
+            0,
+            -0.02
+          ],
+          "glow": 1,
+          "warmth": 0.3
+        }
+      },
+      {
+        "value": 0.5,
+        "metrics": {
+          "areaApprox": 3.6147,
+          "meanThickness": 1.899,
+          "centerThickness": 1.8542,
+          "edgeThickness": 1.947,
+          "taperRatio": 1.0503,
+          "lowerDominance": -0.1807,
+          "meanSmileBias": 0,
+          "meanCenterline": -0.1778,
+          "intraThicknessAsymmetry": 0.1421,
+          "interEyeAreaDiff": 0.4702,
+          "interEyeThicknessDiff": 0.247,
+          "interEyeCenterlineDiff": 0.1105,
+          "interEyeLowerDominanceDiff": 0.1052,
+          "signedInterEyeArea": -0.4702,
+          "signedInterEyeThickness": -0.247,
+          "signedInterEyeCenterline": -0.1105,
+          "signedInterEyeLowerDominance": -0.1052
+        },
+        "lowLevel": {
+          "left": {
+            "lidTop": 0.3004,
+            "lidBottom": 0.0672,
+            "upperInner": 0.3528,
+            "upperOuter": 0.2481,
+            "lowerInner": 0.065,
+            "lowerOuter": 0.0694,
+            "tilt": 0,
+            "width": 0.9528
+          },
+          "right": {
+            "lidTop": 0.189,
+            "lidBottom": 0.0609,
+            "upperInner": 0.2232,
+            "upperOuter": 0.1548,
+            "lowerInner": 0.0587,
+            "lowerOuter": 0.0631,
+            "tilt": 0,
+            "width": 0.9555
+          },
+          "spacing": 0.46,
+          "gaze": [
+            0,
+            -0.02
+          ],
+          "glow": 1,
+          "warmth": 0.3
+        }
+      }
+    ],
+    "spacing": [
+      {
+        "value": 0.2,
+        "metrics": {
+          "areaApprox": 3.6147,
+          "meanThickness": 1.899,
+          "centerThickness": 1.8542,
+          "edgeThickness": 1.947,
+          "taperRatio": 1.0501,
+          "lowerDominance": -0.1807,
+          "meanSmileBias": 0,
+          "meanCenterline": -0.1778,
+          "intraThicknessAsymmetry": 0.1421,
+          "interEyeAreaDiff": 0,
+          "interEyeThicknessDiff": 0,
+          "interEyeCenterlineDiff": 0,
+          "interEyeLowerDominanceDiff": 0,
+          "signedInterEyeArea": 0,
+          "signedInterEyeThickness": 0,
+          "signedInterEyeCenterline": 0,
+          "signedInterEyeLowerDominance": 0
+        },
+        "lowLevel": {
+          "left": {
+            "lidTop": 0.2447,
+            "lidBottom": 0.064,
+            "upperInner": 0.288,
+            "upperOuter": 0.2014,
+            "lowerInner": 0.0618,
+            "lowerOuter": 0.0663,
+            "tilt": 0,
+            "width": 0.9542
+          },
+          "right": {
+            "lidTop": 0.2447,
+            "lidBottom": 0.064,
+            "upperInner": 0.288,
+            "upperOuter": 0.2014,
+            "lowerInner": 0.0618,
+            "lowerOuter": 0.0663,
+            "tilt": 0,
+            "width": 0.9542
+          },
+          "spacing": 0.2,
+          "gaze": [
+            0,
+            -0.02
+          ],
+          "glow": 1,
+          "warmth": 0.3
+        }
+      },
+      {
+        "value": 0.35,
+        "metrics": {
+          "areaApprox": 3.6147,
+          "meanThickness": 1.899,
+          "centerThickness": 1.8542,
+          "edgeThickness": 1.947,
+          "taperRatio": 1.0501,
+          "lowerDominance": -0.1807,
+          "meanSmileBias": 0,
+          "meanCenterline": -0.1778,
+          "intraThicknessAsymmetry": 0.1421,
+          "interEyeAreaDiff": 0,
+          "interEyeThicknessDiff": 0,
+          "interEyeCenterlineDiff": 0,
+          "interEyeLowerDominanceDiff": 0,
+          "signedInterEyeArea": 0,
+          "signedInterEyeThickness": 0,
+          "signedInterEyeCenterline": 0,
+          "signedInterEyeLowerDominance": 0
+        },
+        "lowLevel": {
+          "left": {
+            "lidTop": 0.2447,
+            "lidBottom": 0.064,
+            "upperInner": 0.288,
+            "upperOuter": 0.2014,
+            "lowerInner": 0.0618,
+            "lowerOuter": 0.0663,
+            "tilt": 0,
+            "width": 0.9542
+          },
+          "right": {
+            "lidTop": 0.2447,
+            "lidBottom": 0.064,
+            "upperInner": 0.288,
+            "upperOuter": 0.2014,
+            "lowerInner": 0.0618,
+            "lowerOuter": 0.0663,
+            "tilt": 0,
+            "width": 0.9542
+          },
+          "spacing": 0.35,
+          "gaze": [
+            0,
+            -0.02
+          ],
+          "glow": 1,
+          "warmth": 0.3
+        }
+      },
+      {
+        "value": 0.5,
+        "metrics": {
+          "areaApprox": 3.6147,
+          "meanThickness": 1.899,
+          "centerThickness": 1.8542,
+          "edgeThickness": 1.947,
+          "taperRatio": 1.0501,
+          "lowerDominance": -0.1807,
+          "meanSmileBias": 0,
+          "meanCenterline": -0.1778,
+          "intraThicknessAsymmetry": 0.1421,
+          "interEyeAreaDiff": 0,
+          "interEyeThicknessDiff": 0,
+          "interEyeCenterlineDiff": 0,
+          "interEyeLowerDominanceDiff": 0,
+          "signedInterEyeArea": 0,
+          "signedInterEyeThickness": 0,
+          "signedInterEyeCenterline": 0,
+          "signedInterEyeLowerDominance": 0
+        },
+        "lowLevel": {
+          "left": {
+            "lidTop": 0.2447,
+            "lidBottom": 0.064,
+            "upperInner": 0.288,
+            "upperOuter": 0.2014,
+            "lowerInner": 0.0618,
+            "lowerOuter": 0.0663,
+            "tilt": 0,
+            "width": 0.9542
+          },
+          "right": {
+            "lidTop": 0.2447,
+            "lidBottom": 0.064,
+            "upperInner": 0.288,
+            "upperOuter": 0.2014,
+            "lowerInner": 0.0618,
+            "lowerOuter": 0.0663,
+            "tilt": 0,
+            "width": 0.9542
+          },
+          "spacing": 0.5,
+          "gaze": [
+            0,
+            -0.02
+          ],
+          "glow": 1,
+          "warmth": 0.3
+        }
+      },
+      {
+        "value": 0.7,
+        "metrics": {
+          "areaApprox": 3.6147,
+          "meanThickness": 1.899,
+          "centerThickness": 1.8542,
+          "edgeThickness": 1.947,
+          "taperRatio": 1.0501,
+          "lowerDominance": -0.1807,
+          "meanSmileBias": 0,
+          "meanCenterline": -0.1778,
+          "intraThicknessAsymmetry": 0.1421,
+          "interEyeAreaDiff": 0,
+          "interEyeThicknessDiff": 0,
+          "interEyeCenterlineDiff": 0,
+          "interEyeLowerDominanceDiff": 0,
+          "signedInterEyeArea": 0,
+          "signedInterEyeThickness": 0,
+          "signedInterEyeCenterline": 0,
+          "signedInterEyeLowerDominance": 0
+        },
+        "lowLevel": {
+          "left": {
+            "lidTop": 0.2447,
+            "lidBottom": 0.064,
+            "upperInner": 0.288,
+            "upperOuter": 0.2014,
+            "lowerInner": 0.0618,
+            "lowerOuter": 0.0663,
+            "tilt": 0,
+            "width": 0.9542
+          },
+          "right": {
+            "lidTop": 0.2447,
+            "lidBottom": 0.064,
+            "upperInner": 0.288,
+            "upperOuter": 0.2014,
+            "lowerInner": 0.0618,
+            "lowerOuter": 0.0663,
+            "tilt": 0,
+            "width": 0.9542
+          },
+          "spacing": 0.7,
+          "gaze": [
+            0,
+            -0.02
+          ],
+          "glow": 1,
+          "warmth": 0.3
+        }
+      },
+      {
+        "value": 0.95,
+        "metrics": {
+          "areaApprox": 3.6147,
+          "meanThickness": 1.899,
+          "centerThickness": 1.8542,
+          "edgeThickness": 1.947,
+          "taperRatio": 1.0501,
+          "lowerDominance": -0.1807,
+          "meanSmileBias": 0,
+          "meanCenterline": -0.1778,
+          "intraThicknessAsymmetry": 0.1421,
+          "interEyeAreaDiff": 0,
+          "interEyeThicknessDiff": 0,
+          "interEyeCenterlineDiff": 0,
+          "interEyeLowerDominanceDiff": 0,
+          "signedInterEyeArea": 0,
+          "signedInterEyeThickness": 0,
+          "signedInterEyeCenterline": 0,
+          "signedInterEyeLowerDominance": 0
+        },
+        "lowLevel": {
+          "left": {
+            "lidTop": 0.2447,
+            "lidBottom": 0.064,
+            "upperInner": 0.288,
+            "upperOuter": 0.2014,
+            "lowerInner": 0.0618,
+            "lowerOuter": 0.0663,
+            "tilt": 0,
+            "width": 0.9542
+          },
+          "right": {
+            "lidTop": 0.2447,
+            "lidBottom": 0.064,
+            "upperInner": 0.288,
+            "upperOuter": 0.2014,
+            "lowerInner": 0.0618,
+            "lowerOuter": 0.0663,
+            "tilt": 0,
+            "width": 0.9542
+          },
+          "spacing": 0.95,
+          "gaze": [
+            0,
+            -0.02
+          ],
+          "glow": 1,
+          "warmth": 0.3
+        }
+      }
+    ],
+    "gaze_x": [
+      {
+        "value": -1,
+        "metrics": {
+          "areaApprox": 3.6147,
+          "meanThickness": 1.899,
+          "centerThickness": 1.8542,
+          "edgeThickness": 1.947,
+          "taperRatio": 1.0501,
+          "lowerDominance": -0.1807,
+          "meanSmileBias": 0,
+          "meanCenterline": -0.1778,
+          "intraThicknessAsymmetry": 0.1421,
+          "interEyeAreaDiff": 0,
+          "interEyeThicknessDiff": 0,
+          "interEyeCenterlineDiff": 0,
+          "interEyeLowerDominanceDiff": 0,
+          "signedInterEyeArea": 0,
+          "signedInterEyeThickness": 0,
+          "signedInterEyeCenterline": 0,
+          "signedInterEyeLowerDominance": 0
+        },
+        "lowLevel": {
+          "left": {
+            "lidTop": 0.2447,
+            "lidBottom": 0.064,
+            "upperInner": 0.288,
+            "upperOuter": 0.2014,
+            "lowerInner": 0.0618,
+            "lowerOuter": 0.0663,
+            "tilt": 0,
+            "width": 0.9542
+          },
+          "right": {
+            "lidTop": 0.2447,
+            "lidBottom": 0.064,
+            "upperInner": 0.288,
+            "upperOuter": 0.2014,
+            "lowerInner": 0.0618,
+            "lowerOuter": 0.0663,
+            "tilt": 0,
+            "width": 0.9542
+          },
+          "spacing": 0.46,
+          "gaze": [
+            -1,
+            -0.02
+          ],
+          "glow": 1,
+          "warmth": 0.3
+        }
+      },
+      {
+        "value": -0.5,
+        "metrics": {
+          "areaApprox": 3.6147,
+          "meanThickness": 1.899,
+          "centerThickness": 1.8542,
+          "edgeThickness": 1.947,
+          "taperRatio": 1.0501,
+          "lowerDominance": -0.1807,
+          "meanSmileBias": 0,
+          "meanCenterline": -0.1778,
+          "intraThicknessAsymmetry": 0.1421,
+          "interEyeAreaDiff": 0,
+          "interEyeThicknessDiff": 0,
+          "interEyeCenterlineDiff": 0,
+          "interEyeLowerDominanceDiff": 0,
+          "signedInterEyeArea": 0,
+          "signedInterEyeThickness": 0,
+          "signedInterEyeCenterline": 0,
+          "signedInterEyeLowerDominance": 0
+        },
+        "lowLevel": {
+          "left": {
+            "lidTop": 0.2447,
+            "lidBottom": 0.064,
+            "upperInner": 0.288,
+            "upperOuter": 0.2014,
+            "lowerInner": 0.0618,
+            "lowerOuter": 0.0663,
+            "tilt": 0,
+            "width": 0.9542
+          },
+          "right": {
+            "lidTop": 0.2447,
+            "lidBottom": 0.064,
+            "upperInner": 0.288,
+            "upperOuter": 0.2014,
+            "lowerInner": 0.0618,
+            "lowerOuter": 0.0663,
+            "tilt": 0,
+            "width": 0.9542
+          },
+          "spacing": 0.46,
+          "gaze": [
+            -0.5,
+            -0.02
+          ],
+          "glow": 1,
+          "warmth": 0.3
+        }
+      },
+      {
+        "value": 0,
+        "metrics": {
+          "areaApprox": 3.6147,
+          "meanThickness": 1.899,
+          "centerThickness": 1.8542,
+          "edgeThickness": 1.947,
+          "taperRatio": 1.0501,
+          "lowerDominance": -0.1807,
+          "meanSmileBias": 0,
+          "meanCenterline": -0.1778,
+          "intraThicknessAsymmetry": 0.1421,
+          "interEyeAreaDiff": 0,
+          "interEyeThicknessDiff": 0,
+          "interEyeCenterlineDiff": 0,
+          "interEyeLowerDominanceDiff": 0,
+          "signedInterEyeArea": 0,
+          "signedInterEyeThickness": 0,
+          "signedInterEyeCenterline": 0,
+          "signedInterEyeLowerDominance": 0
+        },
+        "lowLevel": {
+          "left": {
+            "lidTop": 0.2447,
+            "lidBottom": 0.064,
+            "upperInner": 0.288,
+            "upperOuter": 0.2014,
+            "lowerInner": 0.0618,
+            "lowerOuter": 0.0663,
+            "tilt": 0,
+            "width": 0.9542
+          },
+          "right": {
+            "lidTop": 0.2447,
+            "lidBottom": 0.064,
+            "upperInner": 0.288,
+            "upperOuter": 0.2014,
+            "lowerInner": 0.0618,
+            "lowerOuter": 0.0663,
+            "tilt": 0,
+            "width": 0.9542
+          },
+          "spacing": 0.46,
+          "gaze": [
+            0,
+            -0.02
+          ],
+          "glow": 1,
+          "warmth": 0.3
+        }
+      },
+      {
+        "value": 0.5,
+        "metrics": {
+          "areaApprox": 3.6147,
+          "meanThickness": 1.899,
+          "centerThickness": 1.8542,
+          "edgeThickness": 1.947,
+          "taperRatio": 1.0501,
+          "lowerDominance": -0.1807,
+          "meanSmileBias": 0,
+          "meanCenterline": -0.1778,
+          "intraThicknessAsymmetry": 0.1421,
+          "interEyeAreaDiff": 0,
+          "interEyeThicknessDiff": 0,
+          "interEyeCenterlineDiff": 0,
+          "interEyeLowerDominanceDiff": 0,
+          "signedInterEyeArea": 0,
+          "signedInterEyeThickness": 0,
+          "signedInterEyeCenterline": 0,
+          "signedInterEyeLowerDominance": 0
+        },
+        "lowLevel": {
+          "left": {
+            "lidTop": 0.2447,
+            "lidBottom": 0.064,
+            "upperInner": 0.288,
+            "upperOuter": 0.2014,
+            "lowerInner": 0.0618,
+            "lowerOuter": 0.0663,
+            "tilt": 0,
+            "width": 0.9542
+          },
+          "right": {
+            "lidTop": 0.2447,
+            "lidBottom": 0.064,
+            "upperInner": 0.288,
+            "upperOuter": 0.2014,
+            "lowerInner": 0.0618,
+            "lowerOuter": 0.0663,
+            "tilt": 0,
+            "width": 0.9542
+          },
+          "spacing": 0.46,
+          "gaze": [
+            0.5,
+            -0.02
+          ],
+          "glow": 1,
+          "warmth": 0.3
+        }
+      },
+      {
+        "value": 1,
+        "metrics": {
+          "areaApprox": 3.6147,
+          "meanThickness": 1.899,
+          "centerThickness": 1.8542,
+          "edgeThickness": 1.947,
+          "taperRatio": 1.0501,
+          "lowerDominance": -0.1807,
+          "meanSmileBias": 0,
+          "meanCenterline": -0.1778,
+          "intraThicknessAsymmetry": 0.1421,
+          "interEyeAreaDiff": 0,
+          "interEyeThicknessDiff": 0,
+          "interEyeCenterlineDiff": 0,
+          "interEyeLowerDominanceDiff": 0,
+          "signedInterEyeArea": 0,
+          "signedInterEyeThickness": 0,
+          "signedInterEyeCenterline": 0,
+          "signedInterEyeLowerDominance": 0
+        },
+        "lowLevel": {
+          "left": {
+            "lidTop": 0.2447,
+            "lidBottom": 0.064,
+            "upperInner": 0.288,
+            "upperOuter": 0.2014,
+            "lowerInner": 0.0618,
+            "lowerOuter": 0.0663,
+            "tilt": 0,
+            "width": 0.9542
+          },
+          "right": {
+            "lidTop": 0.2447,
+            "lidBottom": 0.064,
+            "upperInner": 0.288,
+            "upperOuter": 0.2014,
+            "lowerInner": 0.0618,
+            "lowerOuter": 0.0663,
+            "tilt": 0,
+            "width": 0.9542
+          },
+          "spacing": 0.46,
+          "gaze": [
+            1,
+            -0.02
+          ],
+          "glow": 1,
+          "warmth": 0.3
+        }
+      }
+    ],
+    "gaze_y": [
+      {
+        "value": -1,
+        "metrics": {
+          "areaApprox": 3.6147,
+          "meanThickness": 1.899,
+          "centerThickness": 1.8542,
+          "edgeThickness": 1.947,
+          "taperRatio": 1.0501,
+          "lowerDominance": -0.1807,
+          "meanSmileBias": 0,
+          "meanCenterline": -0.1778,
+          "intraThicknessAsymmetry": 0.1421,
+          "interEyeAreaDiff": 0,
+          "interEyeThicknessDiff": 0,
+          "interEyeCenterlineDiff": 0,
+          "interEyeLowerDominanceDiff": 0,
+          "signedInterEyeArea": 0,
+          "signedInterEyeThickness": 0,
+          "signedInterEyeCenterline": 0,
+          "signedInterEyeLowerDominance": 0
+        },
+        "lowLevel": {
+          "left": {
+            "lidTop": 0.2447,
+            "lidBottom": 0.064,
+            "upperInner": 0.288,
+            "upperOuter": 0.2014,
+            "lowerInner": 0.0618,
+            "lowerOuter": 0.0663,
+            "tilt": 0,
+            "width": 0.9542
+          },
+          "right": {
+            "lidTop": 0.2447,
+            "lidBottom": 0.064,
+            "upperInner": 0.288,
+            "upperOuter": 0.2014,
+            "lowerInner": 0.0618,
+            "lowerOuter": 0.0663,
+            "tilt": 0,
+            "width": 0.9542
+          },
+          "spacing": 0.46,
+          "gaze": [
+            0,
+            -1
+          ],
+          "glow": 1,
+          "warmth": 0.3
+        }
+      },
+      {
+        "value": -0.5,
+        "metrics": {
+          "areaApprox": 3.6147,
+          "meanThickness": 1.899,
+          "centerThickness": 1.8542,
+          "edgeThickness": 1.947,
+          "taperRatio": 1.0501,
+          "lowerDominance": -0.1807,
+          "meanSmileBias": 0,
+          "meanCenterline": -0.1778,
+          "intraThicknessAsymmetry": 0.1421,
+          "interEyeAreaDiff": 0,
+          "interEyeThicknessDiff": 0,
+          "interEyeCenterlineDiff": 0,
+          "interEyeLowerDominanceDiff": 0,
+          "signedInterEyeArea": 0,
+          "signedInterEyeThickness": 0,
+          "signedInterEyeCenterline": 0,
+          "signedInterEyeLowerDominance": 0
+        },
+        "lowLevel": {
+          "left": {
+            "lidTop": 0.2447,
+            "lidBottom": 0.064,
+            "upperInner": 0.288,
+            "upperOuter": 0.2014,
+            "lowerInner": 0.0618,
+            "lowerOuter": 0.0663,
+            "tilt": 0,
+            "width": 0.9542
+          },
+          "right": {
+            "lidTop": 0.2447,
+            "lidBottom": 0.064,
+            "upperInner": 0.288,
+            "upperOuter": 0.2014,
+            "lowerInner": 0.0618,
+            "lowerOuter": 0.0663,
+            "tilt": 0,
+            "width": 0.9542
+          },
+          "spacing": 0.46,
+          "gaze": [
+            0,
+            -0.5
+          ],
+          "glow": 1,
+          "warmth": 0.3
+        }
+      },
+      {
+        "value": 0,
+        "metrics": {
+          "areaApprox": 3.6147,
+          "meanThickness": 1.899,
+          "centerThickness": 1.8542,
+          "edgeThickness": 1.947,
+          "taperRatio": 1.0501,
+          "lowerDominance": -0.1807,
+          "meanSmileBias": 0,
+          "meanCenterline": -0.1778,
+          "intraThicknessAsymmetry": 0.1421,
+          "interEyeAreaDiff": 0,
+          "interEyeThicknessDiff": 0,
+          "interEyeCenterlineDiff": 0,
+          "interEyeLowerDominanceDiff": 0,
+          "signedInterEyeArea": 0,
+          "signedInterEyeThickness": 0,
+          "signedInterEyeCenterline": 0,
+          "signedInterEyeLowerDominance": 0
+        },
+        "lowLevel": {
+          "left": {
+            "lidTop": 0.2447,
+            "lidBottom": 0.064,
+            "upperInner": 0.288,
+            "upperOuter": 0.2014,
+            "lowerInner": 0.0618,
+            "lowerOuter": 0.0663,
+            "tilt": 0,
+            "width": 0.9542
+          },
+          "right": {
+            "lidTop": 0.2447,
+            "lidBottom": 0.064,
+            "upperInner": 0.288,
+            "upperOuter": 0.2014,
+            "lowerInner": 0.0618,
+            "lowerOuter": 0.0663,
+            "tilt": 0,
+            "width": 0.9542
+          },
+          "spacing": 0.46,
+          "gaze": [
+            0,
+            0
+          ],
+          "glow": 1,
+          "warmth": 0.3
+        }
+      },
+      {
+        "value": 0.5,
+        "metrics": {
+          "areaApprox": 3.6147,
+          "meanThickness": 1.899,
+          "centerThickness": 1.8542,
+          "edgeThickness": 1.947,
+          "taperRatio": 1.0501,
+          "lowerDominance": -0.1807,
+          "meanSmileBias": 0,
+          "meanCenterline": -0.1778,
+          "intraThicknessAsymmetry": 0.1421,
+          "interEyeAreaDiff": 0,
+          "interEyeThicknessDiff": 0,
+          "interEyeCenterlineDiff": 0,
+          "interEyeLowerDominanceDiff": 0,
+          "signedInterEyeArea": 0,
+          "signedInterEyeThickness": 0,
+          "signedInterEyeCenterline": 0,
+          "signedInterEyeLowerDominance": 0
+        },
+        "lowLevel": {
+          "left": {
+            "lidTop": 0.2447,
+            "lidBottom": 0.064,
+            "upperInner": 0.288,
+            "upperOuter": 0.2014,
+            "lowerInner": 0.0618,
+            "lowerOuter": 0.0663,
+            "tilt": 0,
+            "width": 0.9542
+          },
+          "right": {
+            "lidTop": 0.2447,
+            "lidBottom": 0.064,
+            "upperInner": 0.288,
+            "upperOuter": 0.2014,
+            "lowerInner": 0.0618,
+            "lowerOuter": 0.0663,
+            "tilt": 0,
+            "width": 0.9542
+          },
+          "spacing": 0.46,
+          "gaze": [
+            0,
+            0.5
+          ],
+          "glow": 1,
+          "warmth": 0.3
+        }
+      },
+      {
+        "value": 1,
+        "metrics": {
+          "areaApprox": 3.6147,
+          "meanThickness": 1.899,
+          "centerThickness": 1.8542,
+          "edgeThickness": 1.947,
+          "taperRatio": 1.0501,
+          "lowerDominance": -0.1807,
+          "meanSmileBias": 0,
+          "meanCenterline": -0.1778,
+          "intraThicknessAsymmetry": 0.1421,
+          "interEyeAreaDiff": 0,
+          "interEyeThicknessDiff": 0,
+          "interEyeCenterlineDiff": 0,
+          "interEyeLowerDominanceDiff": 0,
+          "signedInterEyeArea": 0,
+          "signedInterEyeThickness": 0,
+          "signedInterEyeCenterline": 0,
+          "signedInterEyeLowerDominance": 0
+        },
+        "lowLevel": {
+          "left": {
+            "lidTop": 0.2447,
+            "lidBottom": 0.064,
+            "upperInner": 0.288,
+            "upperOuter": 0.2014,
+            "lowerInner": 0.0618,
+            "lowerOuter": 0.0663,
+            "tilt": 0,
+            "width": 0.9542
+          },
+          "right": {
+            "lidTop": 0.2447,
+            "lidBottom": 0.064,
+            "upperInner": 0.288,
+            "upperOuter": 0.2014,
+            "lowerInner": 0.0618,
+            "lowerOuter": 0.0663,
+            "tilt": 0,
+            "width": 0.9542
+          },
+          "spacing": 0.46,
+          "gaze": [
+            0,
+            1
+          ],
+          "glow": 1,
+          "warmth": 0.3
+        }
+      }
+    ],
+    "glow": [
+      {
+        "value": 0,
+        "metrics": {
+          "areaApprox": 3.6147,
+          "meanThickness": 1.899,
+          "centerThickness": 1.8542,
+          "edgeThickness": 1.947,
+          "taperRatio": 1.0501,
+          "lowerDominance": -0.1807,
+          "meanSmileBias": 0,
+          "meanCenterline": -0.1778,
+          "intraThicknessAsymmetry": 0.1421,
+          "interEyeAreaDiff": 0,
+          "interEyeThicknessDiff": 0,
+          "interEyeCenterlineDiff": 0,
+          "interEyeLowerDominanceDiff": 0,
+          "signedInterEyeArea": 0,
+          "signedInterEyeThickness": 0,
+          "signedInterEyeCenterline": 0,
+          "signedInterEyeLowerDominance": 0
+        },
+        "lowLevel": {
+          "left": {
+            "lidTop": 0.2447,
+            "lidBottom": 0.064,
+            "upperInner": 0.288,
+            "upperOuter": 0.2014,
+            "lowerInner": 0.0618,
+            "lowerOuter": 0.0663,
+            "tilt": 0,
+            "width": 0.9542
+          },
+          "right": {
+            "lidTop": 0.2447,
+            "lidBottom": 0.064,
+            "upperInner": 0.288,
+            "upperOuter": 0.2014,
+            "lowerInner": 0.0618,
+            "lowerOuter": 0.0663,
+            "tilt": 0,
+            "width": 0.9542
+          },
+          "spacing": 0.46,
+          "gaze": [
+            0,
+            -0.02
+          ],
+          "glow": 0,
+          "warmth": 0.3
+        }
+      },
+      {
+        "value": 0.5,
+        "metrics": {
+          "areaApprox": 3.6147,
+          "meanThickness": 1.899,
+          "centerThickness": 1.8542,
+          "edgeThickness": 1.947,
+          "taperRatio": 1.0501,
+          "lowerDominance": -0.1807,
+          "meanSmileBias": 0,
+          "meanCenterline": -0.1778,
+          "intraThicknessAsymmetry": 0.1421,
+          "interEyeAreaDiff": 0,
+          "interEyeThicknessDiff": 0,
+          "interEyeCenterlineDiff": 0,
+          "interEyeLowerDominanceDiff": 0,
+          "signedInterEyeArea": 0,
+          "signedInterEyeThickness": 0,
+          "signedInterEyeCenterline": 0,
+          "signedInterEyeLowerDominance": 0
+        },
+        "lowLevel": {
+          "left": {
+            "lidTop": 0.2447,
+            "lidBottom": 0.064,
+            "upperInner": 0.288,
+            "upperOuter": 0.2014,
+            "lowerInner": 0.0618,
+            "lowerOuter": 0.0663,
+            "tilt": 0,
+            "width": 0.9542
+          },
+          "right": {
+            "lidTop": 0.2447,
+            "lidBottom": 0.064,
+            "upperInner": 0.288,
+            "upperOuter": 0.2014,
+            "lowerInner": 0.0618,
+            "lowerOuter": 0.0663,
+            "tilt": 0,
+            "width": 0.9542
+          },
+          "spacing": 0.46,
+          "gaze": [
+            0,
+            -0.02
+          ],
+          "glow": 0.5,
+          "warmth": 0.3
+        }
+      },
+      {
+        "value": 1,
+        "metrics": {
+          "areaApprox": 3.6147,
+          "meanThickness": 1.899,
+          "centerThickness": 1.8542,
+          "edgeThickness": 1.947,
+          "taperRatio": 1.0501,
+          "lowerDominance": -0.1807,
+          "meanSmileBias": 0,
+          "meanCenterline": -0.1778,
+          "intraThicknessAsymmetry": 0.1421,
+          "interEyeAreaDiff": 0,
+          "interEyeThicknessDiff": 0,
+          "interEyeCenterlineDiff": 0,
+          "interEyeLowerDominanceDiff": 0,
+          "signedInterEyeArea": 0,
+          "signedInterEyeThickness": 0,
+          "signedInterEyeCenterline": 0,
+          "signedInterEyeLowerDominance": 0
+        },
+        "lowLevel": {
+          "left": {
+            "lidTop": 0.2447,
+            "lidBottom": 0.064,
+            "upperInner": 0.288,
+            "upperOuter": 0.2014,
+            "lowerInner": 0.0618,
+            "lowerOuter": 0.0663,
+            "tilt": 0,
+            "width": 0.9542
+          },
+          "right": {
+            "lidTop": 0.2447,
+            "lidBottom": 0.064,
+            "upperInner": 0.288,
+            "upperOuter": 0.2014,
+            "lowerInner": 0.0618,
+            "lowerOuter": 0.0663,
+            "tilt": 0,
+            "width": 0.9542
+          },
+          "spacing": 0.46,
+          "gaze": [
+            0,
+            -0.02
+          ],
+          "glow": 1,
+          "warmth": 0.3
+        }
+      },
+      {
+        "value": 1.5,
+        "metrics": {
+          "areaApprox": 3.6147,
+          "meanThickness": 1.899,
+          "centerThickness": 1.8542,
+          "edgeThickness": 1.947,
+          "taperRatio": 1.0501,
+          "lowerDominance": -0.1807,
+          "meanSmileBias": 0,
+          "meanCenterline": -0.1778,
+          "intraThicknessAsymmetry": 0.1421,
+          "interEyeAreaDiff": 0,
+          "interEyeThicknessDiff": 0,
+          "interEyeCenterlineDiff": 0,
+          "interEyeLowerDominanceDiff": 0,
+          "signedInterEyeArea": 0,
+          "signedInterEyeThickness": 0,
+          "signedInterEyeCenterline": 0,
+          "signedInterEyeLowerDominance": 0
+        },
+        "lowLevel": {
+          "left": {
+            "lidTop": 0.2447,
+            "lidBottom": 0.064,
+            "upperInner": 0.288,
+            "upperOuter": 0.2014,
+            "lowerInner": 0.0618,
+            "lowerOuter": 0.0663,
+            "tilt": 0,
+            "width": 0.9542
+          },
+          "right": {
+            "lidTop": 0.2447,
+            "lidBottom": 0.064,
+            "upperInner": 0.288,
+            "upperOuter": 0.2014,
+            "lowerInner": 0.0618,
+            "lowerOuter": 0.0663,
+            "tilt": 0,
+            "width": 0.9542
+          },
+          "spacing": 0.46,
+          "gaze": [
+            0,
+            -0.02
+          ],
+          "glow": 1.5,
+          "warmth": 0.3
+        }
+      },
+      {
+        "value": 2,
+        "metrics": {
+          "areaApprox": 3.6147,
+          "meanThickness": 1.899,
+          "centerThickness": 1.8542,
+          "edgeThickness": 1.947,
+          "taperRatio": 1.0501,
+          "lowerDominance": -0.1807,
+          "meanSmileBias": 0,
+          "meanCenterline": -0.1778,
+          "intraThicknessAsymmetry": 0.1421,
+          "interEyeAreaDiff": 0,
+          "interEyeThicknessDiff": 0,
+          "interEyeCenterlineDiff": 0,
+          "interEyeLowerDominanceDiff": 0,
+          "signedInterEyeArea": 0,
+          "signedInterEyeThickness": 0,
+          "signedInterEyeCenterline": 0,
+          "signedInterEyeLowerDominance": 0
+        },
+        "lowLevel": {
+          "left": {
+            "lidTop": 0.2447,
+            "lidBottom": 0.064,
+            "upperInner": 0.288,
+            "upperOuter": 0.2014,
+            "lowerInner": 0.0618,
+            "lowerOuter": 0.0663,
+            "tilt": 0,
+            "width": 0.9542
+          },
+          "right": {
+            "lidTop": 0.2447,
+            "lidBottom": 0.064,
+            "upperInner": 0.288,
+            "upperOuter": 0.2014,
+            "lowerInner": 0.0618,
+            "lowerOuter": 0.0663,
+            "tilt": 0,
+            "width": 0.9542
+          },
+          "spacing": 0.46,
+          "gaze": [
+            0,
+            -0.02
+          ],
+          "glow": 2,
+          "warmth": 0.3
+        }
+      }
+    ],
+    "warmth": [
+      {
+        "value": 0,
+        "metrics": {
+          "areaApprox": 3.6147,
+          "meanThickness": 1.899,
+          "centerThickness": 1.8542,
+          "edgeThickness": 1.947,
+          "taperRatio": 1.0501,
+          "lowerDominance": -0.1807,
+          "meanSmileBias": 0,
+          "meanCenterline": -0.1778,
+          "intraThicknessAsymmetry": 0.1421,
+          "interEyeAreaDiff": 0,
+          "interEyeThicknessDiff": 0,
+          "interEyeCenterlineDiff": 0,
+          "interEyeLowerDominanceDiff": 0,
+          "signedInterEyeArea": 0,
+          "signedInterEyeThickness": 0,
+          "signedInterEyeCenterline": 0,
+          "signedInterEyeLowerDominance": 0
+        },
+        "lowLevel": {
+          "left": {
+            "lidTop": 0.2447,
+            "lidBottom": 0.064,
+            "upperInner": 0.288,
+            "upperOuter": 0.2014,
+            "lowerInner": 0.0618,
+            "lowerOuter": 0.0663,
+            "tilt": 0,
+            "width": 0.9542
+          },
+          "right": {
+            "lidTop": 0.2447,
+            "lidBottom": 0.064,
+            "upperInner": 0.288,
+            "upperOuter": 0.2014,
+            "lowerInner": 0.0618,
+            "lowerOuter": 0.0663,
+            "tilt": 0,
+            "width": 0.9542
+          },
+          "spacing": 0.46,
+          "gaze": [
+            0,
+            -0.02
+          ],
+          "glow": 1,
+          "warmth": 0
+        }
+      },
+      {
+        "value": 0.25,
+        "metrics": {
+          "areaApprox": 3.6147,
+          "meanThickness": 1.899,
+          "centerThickness": 1.8542,
+          "edgeThickness": 1.947,
+          "taperRatio": 1.0501,
+          "lowerDominance": -0.1807,
+          "meanSmileBias": 0,
+          "meanCenterline": -0.1778,
+          "intraThicknessAsymmetry": 0.1421,
+          "interEyeAreaDiff": 0,
+          "interEyeThicknessDiff": 0,
+          "interEyeCenterlineDiff": 0,
+          "interEyeLowerDominanceDiff": 0,
+          "signedInterEyeArea": 0,
+          "signedInterEyeThickness": 0,
+          "signedInterEyeCenterline": 0,
+          "signedInterEyeLowerDominance": 0
+        },
+        "lowLevel": {
+          "left": {
+            "lidTop": 0.2447,
+            "lidBottom": 0.064,
+            "upperInner": 0.288,
+            "upperOuter": 0.2014,
+            "lowerInner": 0.0618,
+            "lowerOuter": 0.0663,
+            "tilt": 0,
+            "width": 0.9542
+          },
+          "right": {
+            "lidTop": 0.2447,
+            "lidBottom": 0.064,
+            "upperInner": 0.288,
+            "upperOuter": 0.2014,
+            "lowerInner": 0.0618,
+            "lowerOuter": 0.0663,
+            "tilt": 0,
+            "width": 0.9542
+          },
+          "spacing": 0.46,
+          "gaze": [
+            0,
+            -0.02
+          ],
+          "glow": 1,
+          "warmth": 0.25
+        }
+      },
+      {
+        "value": 0.5,
+        "metrics": {
+          "areaApprox": 3.6147,
+          "meanThickness": 1.899,
+          "centerThickness": 1.8542,
+          "edgeThickness": 1.947,
+          "taperRatio": 1.0501,
+          "lowerDominance": -0.1807,
+          "meanSmileBias": 0,
+          "meanCenterline": -0.1778,
+          "intraThicknessAsymmetry": 0.1421,
+          "interEyeAreaDiff": 0,
+          "interEyeThicknessDiff": 0,
+          "interEyeCenterlineDiff": 0,
+          "interEyeLowerDominanceDiff": 0,
+          "signedInterEyeArea": 0,
+          "signedInterEyeThickness": 0,
+          "signedInterEyeCenterline": 0,
+          "signedInterEyeLowerDominance": 0
+        },
+        "lowLevel": {
+          "left": {
+            "lidTop": 0.2447,
+            "lidBottom": 0.064,
+            "upperInner": 0.288,
+            "upperOuter": 0.2014,
+            "lowerInner": 0.0618,
+            "lowerOuter": 0.0663,
+            "tilt": 0,
+            "width": 0.9542
+          },
+          "right": {
+            "lidTop": 0.2447,
+            "lidBottom": 0.064,
+            "upperInner": 0.288,
+            "upperOuter": 0.2014,
+            "lowerInner": 0.0618,
+            "lowerOuter": 0.0663,
+            "tilt": 0,
+            "width": 0.9542
+          },
+          "spacing": 0.46,
+          "gaze": [
+            0,
+            -0.02
+          ],
+          "glow": 1,
+          "warmth": 0.5
+        }
+      },
+      {
+        "value": 0.75,
+        "metrics": {
+          "areaApprox": 3.6147,
+          "meanThickness": 1.899,
+          "centerThickness": 1.8542,
+          "edgeThickness": 1.947,
+          "taperRatio": 1.0501,
+          "lowerDominance": -0.1807,
+          "meanSmileBias": 0,
+          "meanCenterline": -0.1778,
+          "intraThicknessAsymmetry": 0.1421,
+          "interEyeAreaDiff": 0,
+          "interEyeThicknessDiff": 0,
+          "interEyeCenterlineDiff": 0,
+          "interEyeLowerDominanceDiff": 0,
+          "signedInterEyeArea": 0,
+          "signedInterEyeThickness": 0,
+          "signedInterEyeCenterline": 0,
+          "signedInterEyeLowerDominance": 0
+        },
+        "lowLevel": {
+          "left": {
+            "lidTop": 0.2447,
+            "lidBottom": 0.064,
+            "upperInner": 0.288,
+            "upperOuter": 0.2014,
+            "lowerInner": 0.0618,
+            "lowerOuter": 0.0663,
+            "tilt": 0,
+            "width": 0.9542
+          },
+          "right": {
+            "lidTop": 0.2447,
+            "lidBottom": 0.064,
+            "upperInner": 0.288,
+            "upperOuter": 0.2014,
+            "lowerInner": 0.0618,
+            "lowerOuter": 0.0663,
+            "tilt": 0,
+            "width": 0.9542
+          },
+          "spacing": 0.46,
+          "gaze": [
+            0,
+            -0.02
+          ],
+          "glow": 1,
+          "warmth": 0.75
+        }
+      },
+      {
+        "value": 1,
+        "metrics": {
+          "areaApprox": 3.6147,
+          "meanThickness": 1.899,
+          "centerThickness": 1.8542,
+          "edgeThickness": 1.947,
+          "taperRatio": 1.0501,
+          "lowerDominance": -0.1807,
+          "meanSmileBias": 0,
+          "meanCenterline": -0.1778,
+          "intraThicknessAsymmetry": 0.1421,
+          "interEyeAreaDiff": 0,
+          "interEyeThicknessDiff": 0,
+          "interEyeCenterlineDiff": 0,
+          "interEyeLowerDominanceDiff": 0,
+          "signedInterEyeArea": 0,
+          "signedInterEyeThickness": 0,
+          "signedInterEyeCenterline": 0,
+          "signedInterEyeLowerDominance": 0
+        },
+        "lowLevel": {
+          "left": {
+            "lidTop": 0.2447,
+            "lidBottom": 0.064,
+            "upperInner": 0.288,
+            "upperOuter": 0.2014,
+            "lowerInner": 0.0618,
+            "lowerOuter": 0.0663,
+            "tilt": 0,
+            "width": 0.9542
+          },
+          "right": {
+            "lidTop": 0.2447,
+            "lidBottom": 0.064,
+            "upperInner": 0.288,
+            "upperOuter": 0.2014,
+            "lowerInner": 0.0618,
+            "lowerOuter": 0.0663,
+            "tilt": 0,
+            "width": 0.9542
+          },
+          "spacing": 0.46,
+          "gaze": [
+            0,
+            -0.02
+          ],
+          "glow": 1,
+          "warmth": 1
+        }
+      }
+    ]
+  },
+  "sensitivities": {
+    "openness": {
+      "areaApprox": {
+        "metric": 2.6124,
+        "lowLevel": {
+          "leftLidTop": -0.6192,
+          "leftLidBottom": -0.035,
+          "leftWidth": 0.015
+        }
+      },
+      "meanThickness": {
+        "metric": 1.3724,
+        "lowLevel": {
+          "leftLidTop": -0.6192,
+          "leftLidBottom": -0.035,
+          "leftWidth": 0.015
+        }
+      },
+      "lowerDominance": {
+        "metric": 0.5842,
+        "lowLevel": {
+          "leftLidTop": -0.6192,
+          "leftLidBottom": -0.035,
+          "leftWidth": 0.015
+        }
+      },
+      "meanSmileBias": {
+        "metric": 0,
+        "lowLevel": {
+          "leftLidTop": -0.6192,
+          "leftLidBottom": -0.035,
+          "leftWidth": 0.015
+        }
+      },
+      "intraThicknessAsymmetry": {
+        "metric": -0.3485,
+        "lowLevel": {
+          "leftLidTop": -0.6192,
+          "leftLidBottom": -0.035,
+          "leftWidth": 0.015
+        }
+      },
+      "signedInterEyeThickness": {
+        "metric": 0,
+        "lowLevel": {
+          "leftLidTop": -0.6192,
+          "leftLidBottom": -0.035,
+          "leftWidth": 0.015
+        }
+      }
+    },
+    "squint": {
+      "areaApprox": {
+        "metric": -1.1907,
+        "lowLevel": {
+          "leftLidTop": 0.2292,
+          "leftLidBottom": 0.07,
+          "leftWidth": -0.06
+        }
+      },
+      "meanThickness": {
+        "metric": -0.6255,
+        "lowLevel": {
+          "leftLidTop": 0.2292,
+          "leftLidBottom": 0.07,
+          "leftWidth": -0.06
+        }
+      },
+      "lowerDominance": {
+        "metric": -0.1592,
+        "lowLevel": {
+          "leftLidTop": 0.2292,
+          "leftLidBottom": 0.07,
+          "leftWidth": -0.06
+        }
+      },
+      "meanSmileBias": {
+        "metric": 0,
+        "lowLevel": {
+          "leftLidTop": 0.2292,
+          "leftLidBottom": 0.07,
+          "leftWidth": -0.06
+        }
+      },
+      "intraThicknessAsymmetry": {
+        "metric": 0.2448,
+        "lowLevel": {
+          "leftLidTop": 0.2292,
+          "leftLidBottom": 0.07,
+          "leftWidth": -0.06
+        }
+      },
+      "signedInterEyeThickness": {
+        "metric": 0,
+        "lowLevel": {
+          "leftLidTop": 0.2292,
+          "leftLidBottom": 0.07,
+          "leftWidth": -0.06
+        }
+      }
+    },
+    "smile": {
+      "areaApprox": {
+        "metric": -1.2948,
+        "lowLevel": {
+          "leftLidTop": 0.004,
+          "leftLidBottom": 0.3261,
+          "leftWidth": -0.0012
+        }
+      },
+      "meanThickness": {
+        "metric": -0.6802,
+        "lowLevel": {
+          "leftLidTop": 0.004,
+          "leftLidBottom": 0.3261,
+          "leftWidth": -0.0012
+        }
+      },
+      "lowerDominance": {
+        "metric": 0.3221,
+        "lowLevel": {
+          "leftLidTop": 0.004,
+          "leftLidBottom": 0.3261,
+          "leftWidth": -0.0012
+        }
+      },
+      "meanSmileBias": {
+        "metric": 0,
+        "lowLevel": {
+          "leftLidTop": 0.004,
+          "leftLidBottom": 0.3261,
+          "leftWidth": -0.0012
+        }
+      },
+      "intraThicknessAsymmetry": {
+        "metric": -0.065,
+        "lowLevel": {
+          "leftLidTop": 0.004,
+          "leftLidBottom": 0.3261,
+          "leftWidth": -0.0012
+        }
+      },
+      "signedInterEyeThickness": {
+        "metric": 0,
+        "lowLevel": {
+          "leftLidTop": 0.004,
+          "leftLidBottom": 0.3261,
+          "leftWidth": -0.0012
+        }
+      }
+    },
+    "roundness": {
+      "areaApprox": {
+        "metric": -0.0784,
+        "lowLevel": {
+          "leftLidTop": 0,
+          "leftLidBottom": 0.02,
+          "leftWidth": -0.22
+        }
+      },
+      "meanThickness": {
+        "metric": -0.0412,
+        "lowLevel": {
+          "leftLidTop": 0,
+          "leftLidBottom": 0.02,
+          "leftWidth": -0.22
+        }
+      },
+      "lowerDominance": {
+        "metric": 0.02,
+        "lowLevel": {
+          "leftLidTop": 0,
+          "leftLidBottom": 0.02,
+          "leftWidth": -0.22
+        }
+      },
+      "meanSmileBias": {
+        "metric": 0,
+        "lowLevel": {
+          "leftLidTop": 0,
+          "leftLidBottom": 0.02,
+          "leftWidth": -0.22
+        }
+      },
+      "intraThicknessAsymmetry": {
+        "metric": -0.0068,
+        "lowLevel": {
+          "leftLidTop": 0,
+          "leftLidBottom": 0.02,
+          "leftWidth": -0.22
+        }
+      },
+      "signedInterEyeThickness": {
+        "metric": 0,
+        "lowLevel": {
+          "leftLidTop": 0,
+          "leftLidBottom": 0.02,
+          "leftWidth": -0.22
+        }
+      }
+    },
+    "slant": {
+      "areaApprox": {
+        "metric": 0.008,
+        "lowLevel": {
+          "leftLidTop": -0.002,
+          "leftLidBottom": 0,
+          "leftWidth": 0
+        }
+      },
+      "meanThickness": {
+        "metric": 0.0042,
+        "lowLevel": {
+          "leftLidTop": -0.002,
+          "leftLidBottom": 0,
+          "leftWidth": 0
+        }
+      },
+      "lowerDominance": {
+        "metric": 0.002,
+        "lowLevel": {
+          "leftLidTop": -0.002,
+          "leftLidBottom": 0,
+          "leftWidth": 0
+        }
+      },
+      "meanSmileBias": {
+        "metric": 0,
+        "lowLevel": {
+          "leftLidTop": -0.002,
+          "leftLidBottom": 0,
+          "leftWidth": 0
+        }
+      },
+      "intraThicknessAsymmetry": {
+        "metric": -0.2731,
+        "lowLevel": {
+          "leftLidTop": -0.002,
+          "leftLidBottom": 0,
+          "leftWidth": 0
+        }
+      },
+      "signedInterEyeThickness": {
+        "metric": 0,
+        "lowLevel": {
+          "leftLidTop": -0.002,
+          "leftLidBottom": 0,
+          "leftWidth": 0
+        }
+      }
+    },
+    "asymmetry": {
+      "areaApprox": {
+        "metric": 0,
+        "lowLevel": {
+          "leftLidTop": 0.1115,
+          "leftLidBottom": 0.0063,
+          "leftWidth": -0.0027
+        }
+      },
+      "meanThickness": {
+        "metric": 0,
+        "lowLevel": {
+          "leftLidTop": 0.1115,
+          "leftLidBottom": 0.0063,
+          "leftWidth": -0.0027
+        }
+      },
+      "lowerDominance": {
+        "metric": 0,
+        "lowLevel": {
+          "leftLidTop": 0.1115,
+          "leftLidBottom": 0.0063,
+          "leftWidth": -0.0027
+        }
+      },
+      "meanSmileBias": {
+        "metric": 0,
+        "lowLevel": {
+          "leftLidTop": 0.1115,
+          "leftLidBottom": 0.0063,
+          "leftWidth": -0.0027
+        }
+      },
+      "intraThicknessAsymmetry": {
+        "metric": 0,
+        "lowLevel": {
+          "leftLidTop": 0.1115,
+          "leftLidBottom": 0.0063,
+          "leftWidth": -0.0027
+        }
+      },
+      "signedInterEyeThickness": {
+        "metric": -0.4941,
+        "lowLevel": {
+          "leftLidTop": 0.1115,
+          "leftLidBottom": 0.0063,
+          "leftWidth": -0.0027
+        }
+      }
+    },
+    "spacing": {
+      "areaApprox": {
+        "metric": 0,
+        "lowLevel": {
+          "leftLidTop": 0,
+          "leftLidBottom": 0,
+          "leftWidth": 0
+        }
+      },
+      "meanThickness": {
+        "metric": 0,
+        "lowLevel": {
+          "leftLidTop": 0,
+          "leftLidBottom": 0,
+          "leftWidth": 0
+        }
+      },
+      "lowerDominance": {
+        "metric": 0,
+        "lowLevel": {
+          "leftLidTop": 0,
+          "leftLidBottom": 0,
+          "leftWidth": 0
+        }
+      },
+      "meanSmileBias": {
+        "metric": 0,
+        "lowLevel": {
+          "leftLidTop": 0,
+          "leftLidBottom": 0,
+          "leftWidth": 0
+        }
+      },
+      "intraThicknessAsymmetry": {
+        "metric": 0,
+        "lowLevel": {
+          "leftLidTop": 0,
+          "leftLidBottom": 0,
+          "leftWidth": 0
+        }
+      },
+      "signedInterEyeThickness": {
+        "metric": 0,
+        "lowLevel": {
+          "leftLidTop": 0,
+          "leftLidBottom": 0,
+          "leftWidth": 0
+        }
+      }
+    },
+    "gaze_x": {
+      "areaApprox": {
+        "metric": 0,
+        "lowLevel": {
+          "leftLidTop": 0,
+          "leftLidBottom": 0,
+          "leftWidth": 0
+        }
+      },
+      "meanThickness": {
+        "metric": 0,
+        "lowLevel": {
+          "leftLidTop": 0,
+          "leftLidBottom": 0,
+          "leftWidth": 0
+        }
+      },
+      "lowerDominance": {
+        "metric": 0,
+        "lowLevel": {
+          "leftLidTop": 0,
+          "leftLidBottom": 0,
+          "leftWidth": 0
+        }
+      },
+      "meanSmileBias": {
+        "metric": 0,
+        "lowLevel": {
+          "leftLidTop": 0,
+          "leftLidBottom": 0,
+          "leftWidth": 0
+        }
+      },
+      "intraThicknessAsymmetry": {
+        "metric": 0,
+        "lowLevel": {
+          "leftLidTop": 0,
+          "leftLidBottom": 0,
+          "leftWidth": 0
+        }
+      },
+      "signedInterEyeThickness": {
+        "metric": 0,
+        "lowLevel": {
+          "leftLidTop": 0,
+          "leftLidBottom": 0,
+          "leftWidth": 0
+        }
+      }
+    },
+    "gaze_y": {
+      "areaApprox": {
+        "metric": 0,
+        "lowLevel": {
+          "leftLidTop": 0,
+          "leftLidBottom": 0,
+          "leftWidth": 0
+        }
+      },
+      "meanThickness": {
+        "metric": 0,
+        "lowLevel": {
+          "leftLidTop": 0,
+          "leftLidBottom": 0,
+          "leftWidth": 0
+        }
+      },
+      "lowerDominance": {
+        "metric": 0,
+        "lowLevel": {
+          "leftLidTop": 0,
+          "leftLidBottom": 0,
+          "leftWidth": 0
+        }
+      },
+      "meanSmileBias": {
+        "metric": 0,
+        "lowLevel": {
+          "leftLidTop": 0,
+          "leftLidBottom": 0,
+          "leftWidth": 0
+        }
+      },
+      "intraThicknessAsymmetry": {
+        "metric": 0,
+        "lowLevel": {
+          "leftLidTop": 0,
+          "leftLidBottom": 0,
+          "leftWidth": 0
+        }
+      },
+      "signedInterEyeThickness": {
+        "metric": 0,
+        "lowLevel": {
+          "leftLidTop": 0,
+          "leftLidBottom": 0,
+          "leftWidth": 0
+        }
+      }
+    },
+    "glow": {
+      "areaApprox": {
+        "metric": 0,
+        "lowLevel": {
+          "leftLidTop": 0,
+          "leftLidBottom": 0,
+          "leftWidth": 0
+        }
+      },
+      "meanThickness": {
+        "metric": 0,
+        "lowLevel": {
+          "leftLidTop": 0,
+          "leftLidBottom": 0,
+          "leftWidth": 0
+        }
+      },
+      "lowerDominance": {
+        "metric": 0,
+        "lowLevel": {
+          "leftLidTop": 0,
+          "leftLidBottom": 0,
+          "leftWidth": 0
+        }
+      },
+      "meanSmileBias": {
+        "metric": 0,
+        "lowLevel": {
+          "leftLidTop": 0,
+          "leftLidBottom": 0,
+          "leftWidth": 0
+        }
+      },
+      "intraThicknessAsymmetry": {
+        "metric": 0,
+        "lowLevel": {
+          "leftLidTop": 0,
+          "leftLidBottom": 0,
+          "leftWidth": 0
+        }
+      },
+      "signedInterEyeThickness": {
+        "metric": 0,
+        "lowLevel": {
+          "leftLidTop": 0,
+          "leftLidBottom": 0,
+          "leftWidth": 0
+        }
+      }
+    },
+    "warmth": {
+      "areaApprox": {
+        "metric": 0,
+        "lowLevel": {
+          "leftLidTop": 0,
+          "leftLidBottom": 0,
+          "leftWidth": 0
+        }
+      },
+      "meanThickness": {
+        "metric": 0,
+        "lowLevel": {
+          "leftLidTop": 0,
+          "leftLidBottom": 0,
+          "leftWidth": 0
+        }
+      },
+      "lowerDominance": {
+        "metric": 0,
+        "lowLevel": {
+          "leftLidTop": 0,
+          "leftLidBottom": 0,
+          "leftWidth": 0
+        }
+      },
+      "meanSmileBias": {
+        "metric": 0,
+        "lowLevel": {
+          "leftLidTop": 0,
+          "leftLidBottom": 0,
+          "leftWidth": 0
+        }
+      },
+      "intraThicknessAsymmetry": {
+        "metric": 0,
+        "lowLevel": {
+          "leftLidTop": 0,
+          "leftLidBottom": 0,
+          "leftWidth": 0
+        }
+      },
+      "signedInterEyeThickness": {
+        "metric": 0,
+        "lowLevel": {
+          "leftLidTop": 0,
+          "leftLidBottom": 0,
+          "leftWidth": 0
+        }
+      }
+    }
+  },
+  "interactions": {
+    "smile__squint": {
+      "areaApprox": 0,
+      "meanThickness": 0,
+      "lowerDominance": 0,
+      "meanSmileBias": 0,
+      "intraThicknessAsymmetry": 0,
+      "signedInterEyeThickness": 0
+    },
+    "smile__roundness": {
+      "areaApprox": 0,
+      "meanThickness": 0,
+      "lowerDominance": 0,
+      "meanSmileBias": 0,
+      "intraThicknessAsymmetry": 0,
+      "signedInterEyeThickness": 0
+    },
+    "smile__openness": {
+      "areaApprox": 0,
+      "meanThickness": 0,
+      "lowerDominance": 0,
+      "meanSmileBias": 0,
+      "intraThicknessAsymmetry": 0,
+      "signedInterEyeThickness": 0
+    },
+    "smile__slant": {
+      "areaApprox": 0,
+      "meanThickness": 0,
+      "lowerDominance": 0,
+      "meanSmileBias": 0,
+      "intraThicknessAsymmetry": 0,
+      "signedInterEyeThickness": 0
+    },
+    "squint__openness": {
+      "areaApprox": 0,
+      "meanThickness": 0,
+      "lowerDominance": 0,
+      "meanSmileBias": 0,
+      "intraThicknessAsymmetry": 0,
+      "signedInterEyeThickness": 0
+    }
+  },
+  "denseSmileSweep": [
+    {
+      "value": 0,
+      "areaApprox": 3.7696,
+      "centerThickness": 1.9355,
+      "taperRatio": 1.048,
+      "lowerDominance": -0.2192,
+      "meanSmileBias": 0,
+      "interEyeThicknessDiff": 0
+    },
+    {
+      "value": 0.02,
+      "areaApprox": 3.7438,
+      "centerThickness": 1.922,
+      "taperRatio": 1.0483,
+      "lowerDominance": -0.2128,
+      "meanSmileBias": 0,
+      "interEyeThicknessDiff": 0
+    },
+    {
+      "value": 0.04,
+      "areaApprox": 3.718,
+      "centerThickness": 1.9084,
+      "taperRatio": 1.0487,
+      "lowerDominance": -0.2063,
+      "meanSmileBias": 0,
+      "interEyeThicknessDiff": 0
+    },
+    {
+      "value": 0.06,
+      "areaApprox": 3.6922,
+      "centerThickness": 1.8949,
+      "taperRatio": 1.049,
+      "lowerDominance": -0.1999,
+      "meanSmileBias": 0,
+      "interEyeThicknessDiff": 0
+    },
+    {
+      "value": 0.08,
+      "areaApprox": 3.6664,
+      "centerThickness": 1.8813,
+      "taperRatio": 1.0494,
+      "lowerDominance": -0.1935,
+      "meanSmileBias": 0,
+      "interEyeThicknessDiff": 0
+    },
+    {
+      "value": 0.1,
+      "areaApprox": 3.6406,
+      "centerThickness": 1.8677,
+      "taperRatio": 1.0497,
+      "lowerDominance": -0.1871,
+      "meanSmileBias": 0,
+      "interEyeThicknessDiff": 0
+    },
+    {
+      "value": 0.12,
+      "areaApprox": 3.6147,
+      "centerThickness": 1.8542,
+      "taperRatio": 1.0501,
+      "lowerDominance": -0.1807,
+      "meanSmileBias": 0,
+      "interEyeThicknessDiff": 0
+    },
+    {
+      "value": 0.14,
+      "areaApprox": 3.5889,
+      "centerThickness": 1.8406,
+      "taperRatio": 1.0504,
+      "lowerDominance": -0.1742,
+      "meanSmileBias": 0,
+      "interEyeThicknessDiff": 0
+    },
+    {
+      "value": 0.16,
+      "areaApprox": 3.5631,
+      "centerThickness": 1.8271,
+      "taperRatio": 1.0508,
+      "lowerDominance": -0.1678,
+      "meanSmileBias": 0,
+      "interEyeThicknessDiff": 0
+    },
+    {
+      "value": 0.18,
+      "areaApprox": 3.5373,
+      "centerThickness": 1.8135,
+      "taperRatio": 1.0512,
+      "lowerDominance": -0.1614,
+      "meanSmileBias": 0,
+      "interEyeThicknessDiff": 0
+    },
+    {
+      "value": 0.2,
+      "areaApprox": 3.5108,
+      "centerThickness": 1.7996,
+      "taperRatio": 1.0516,
+      "lowerDominance": -0.1548,
+      "meanSmileBias": 0,
+      "interEyeThicknessDiff": 0
+    },
+    {
+      "value": 0.22,
+      "areaApprox": 3.483,
+      "centerThickness": 1.7849,
+      "taperRatio": 1.052,
+      "lowerDominance": -0.1479,
+      "meanSmileBias": 0,
+      "interEyeThicknessDiff": 0
+    },
+    {
+      "value": 0.24,
+      "areaApprox": 3.4539,
+      "centerThickness": 1.7697,
+      "taperRatio": 1.0525,
+      "lowerDominance": -0.1406,
+      "meanSmileBias": 0,
+      "interEyeThicknessDiff": 0
+    },
+    {
+      "value": 0.26,
+      "areaApprox": 3.4236,
+      "centerThickness": 1.7538,
+      "taperRatio": 1.0529,
+      "lowerDominance": -0.133,
+      "meanSmileBias": 0,
+      "interEyeThicknessDiff": 0
+    },
+    {
+      "value": 0.28,
+      "areaApprox": 3.3923,
+      "centerThickness": 1.7373,
+      "taperRatio": 1.0534,
+      "lowerDominance": -0.1252,
+      "meanSmileBias": 0,
+      "interEyeThicknessDiff": 0
+    },
+    {
+      "value": 0.3,
+      "areaApprox": 3.36,
+      "centerThickness": 1.7204,
+      "taperRatio": 1.054,
+      "lowerDominance": -0.1172,
+      "meanSmileBias": 0,
+      "interEyeThicknessDiff": 0
+    },
+    {
+      "value": 0.32,
+      "areaApprox": 3.3129,
+      "centerThickness": 1.6963,
+      "taperRatio": 1.0538,
+      "lowerDominance": -0.1089,
+      "meanSmileBias": 0.0046,
+      "interEyeThicknessDiff": 0
+    },
+    {
+      "value": 0.34,
+      "areaApprox": 3.2369,
+      "centerThickness": 1.6585,
+      "taperRatio": 1.0521,
+      "lowerDominance": -0.1004,
+      "meanSmileBias": 0.0188,
+      "interEyeThicknessDiff": 0
+    },
+    {
+      "value": 0.36,
+      "areaApprox": 3.1352,
+      "centerThickness": 1.6086,
+      "taperRatio": 1.0489,
+      "lowerDominance": -0.0917,
+      "meanSmileBias": 0.0416,
+      "interEyeThicknessDiff": 0
+    },
+    {
+      "value": 0.38,
+      "areaApprox": 3.0115,
+      "centerThickness": 1.5482,
+      "taperRatio": 1.0442,
+      "lowerDominance": -0.0829,
+      "meanSmileBias": 0.0723,
+      "interEyeThicknessDiff": 0
+    },
+    {
+      "value": 0.4,
+      "areaApprox": 2.8702,
+      "centerThickness": 1.4795,
+      "taperRatio": 1.0379,
+      "lowerDominance": -0.074,
+      "meanSmileBias": 0.1096,
+      "interEyeThicknessDiff": 0
+    },
+    {
+      "value": 0.42,
+      "areaApprox": 2.7158,
+      "centerThickness": 1.4046,
+      "taperRatio": 1.0301,
+      "lowerDominance": -0.065,
+      "meanSmileBias": 0.1523,
+      "interEyeThicknessDiff": 0
+    },
+    {
+      "value": 0.44,
+      "areaApprox": 2.5531,
+      "centerThickness": 1.3257,
+      "taperRatio": 1.0207,
+      "lowerDominance": -0.0559,
+      "meanSmileBias": 0.1987,
+      "interEyeThicknessDiff": 0
+    },
+    {
+      "value": 0.46,
+      "areaApprox": 2.3872,
+      "centerThickness": 1.2453,
+      "taperRatio": 1.0099,
+      "lowerDominance": -0.0468,
+      "meanSmileBias": 0.2473,
+      "interEyeThicknessDiff": 0
+    },
+    {
+      "value": 0.48,
+      "areaApprox": 2.2229,
+      "centerThickness": 1.1657,
+      "taperRatio": 0.9978,
+      "lowerDominance": -0.0376,
+      "meanSmileBias": 0.2965,
+      "interEyeThicknessDiff": 0
+    },
+    {
+      "value": 0.5,
+      "areaApprox": 2.056,
+      "centerThickness": 1.0848,
+      "taperRatio": 0.9837,
+      "lowerDominance": -0.0279,
+      "meanSmileBias": 0.3472,
+      "interEyeThicknessDiff": 0
+    },
+    {
+      "value": 0.52,
+      "areaApprox": 1.8866,
+      "centerThickness": 1.0026,
+      "taperRatio": 0.9674,
+      "lowerDominance": -0.0173,
+      "meanSmileBias": 0.3993,
+      "interEyeThicknessDiff": 0
+    },
+    {
+      "value": 0.54,
+      "areaApprox": 1.7278,
+      "centerThickness": 0.9253,
+      "taperRatio": 0.9498,
+      "lowerDominance": -0.006,
+      "meanSmileBias": 0.4482,
+      "interEyeThicknessDiff": 0
+    },
+    {
+      "value": 0.56,
+      "areaApprox": 1.5943,
+      "centerThickness": 0.8602,
+      "taperRatio": 0.9331,
+      "lowerDominance": 0.006,
+      "meanSmileBias": 0.4886,
+      "interEyeThicknessDiff": 0
+    },
+    {
+      "value": 0.58,
+      "areaApprox": 1.5015,
+      "centerThickness": 0.8146,
+      "taperRatio": 0.9208,
+      "lowerDominance": 0.0185,
+      "meanSmileBias": 0.5142,
+      "interEyeThicknessDiff": 0
+    },
+    {
+      "value": 0.6,
+      "areaApprox": 1.4609,
+      "centerThickness": 0.794,
+      "taperRatio": 0.9168,
+      "lowerDominance": 0.0313,
+      "meanSmileBias": 0.52,
+      "interEyeThicknessDiff": 0
+    },
+    {
+      "value": 0.62,
+      "areaApprox": 1.4348,
+      "centerThickness": 0.7803,
+      "taperRatio": 0.9154,
+      "lowerDominance": 0.0444,
+      "meanSmileBias": 0.52,
+      "interEyeThicknessDiff": 0
+    },
+    {
+      "value": 0.64,
+      "areaApprox": 1.4085,
+      "centerThickness": 0.7665,
+      "taperRatio": 0.9138,
+      "lowerDominance": 0.0575,
+      "meanSmileBias": 0.52,
+      "interEyeThicknessDiff": 0
+    },
+    {
+      "value": 0.66,
+      "areaApprox": 1.3823,
+      "centerThickness": 0.7527,
+      "taperRatio": 0.9123,
+      "lowerDominance": 0.0705,
+      "meanSmileBias": 0.52,
+      "interEyeThicknessDiff": 0
+    },
+    {
+      "value": 0.68,
+      "areaApprox": 1.3566,
+      "centerThickness": 0.7392,
+      "taperRatio": 0.9107,
+      "lowerDominance": 0.0833,
+      "meanSmileBias": 0.52,
+      "interEyeThicknessDiff": 0
+    },
+    {
+      "value": 0.7,
+      "areaApprox": 1.3315,
+      "centerThickness": 0.726,
+      "taperRatio": 0.909,
+      "lowerDominance": 0.0958,
+      "meanSmileBias": 0.52,
+      "interEyeThicknessDiff": 0
+    },
+    {
+      "value": 0.72,
+      "areaApprox": 1.3075,
+      "centerThickness": 0.7134,
+      "taperRatio": 0.9074,
+      "lowerDominance": 0.1077,
+      "meanSmileBias": 0.52,
+      "interEyeThicknessDiff": 0
+    },
+    {
+      "value": 0.74,
+      "areaApprox": 1.2848,
+      "centerThickness": 0.7015,
+      "taperRatio": 0.9059,
+      "lowerDominance": 0.119,
+      "meanSmileBias": 0.52,
+      "interEyeThicknessDiff": 0
+    },
+    {
+      "value": 0.76,
+      "areaApprox": 1.2491,
+      "centerThickness": 0.62,
+      "taperRatio": 1.007,
+      "lowerDominance": 0.1295,
+      "meanSmileBias": 0.5277,
+      "interEyeThicknessDiff": 0
+    },
+    {
+      "value": 0.78,
+      "areaApprox": 1.1905,
+      "centerThickness": 0.5471,
+      "taperRatio": 1.1228,
+      "lowerDominance": 0.1391,
+      "meanSmileBias": 0.5488,
+      "interEyeThicknessDiff": 0
+    },
+    {
+      "value": 0.8,
+      "areaApprox": 1.1169,
+      "centerThickness": 0.485,
+      "taperRatio": 1.2478,
+      "lowerDominance": 0.1478,
+      "meanSmileBias": 0.5791,
+      "interEyeThicknessDiff": 0
+    },
+    {
+      "value": 0.82,
+      "areaApprox": 1.0339,
+      "centerThickness": 0.4328,
+      "taperRatio": 1.3707,
+      "lowerDominance": 0.1556,
+      "meanSmileBias": 0.6151,
+      "interEyeThicknessDiff": 0
+    },
+    {
+      "value": 0.84,
+      "areaApprox": 0.9494,
+      "centerThickness": 0.391,
+      "taperRatio": 1.4279,
+      "lowerDominance": 0.1625,
+      "meanSmileBias": 0.6527,
+      "interEyeThicknessDiff": 0
+    },
+    {
+      "value": 0.86,
+      "areaApprox": 0.865,
+      "centerThickness": 0.356,
+      "taperRatio": 1.4215,
+      "lowerDominance": 0.1687,
+      "meanSmileBias": 0.6907,
+      "interEyeThicknessDiff": 0
+    },
+    {
+      "value": 0.88,
+      "areaApprox": 0.7819,
+      "centerThickness": 0.3244,
+      "taperRatio": 1.3948,
+      "lowerDominance": 0.1748,
+      "meanSmileBias": 0.7286,
+      "interEyeThicknessDiff": 0
+    },
+    {
+      "value": 0.9,
+      "areaApprox": 0.7038,
+      "centerThickness": 0.2961,
+      "taperRatio": 1.3552,
+      "lowerDominance": 0.1809,
+      "meanSmileBias": 0.7648,
+      "interEyeThicknessDiff": 0
+    },
+    {
+      "value": 0.92,
+      "areaApprox": 0.6307,
+      "centerThickness": 0.2711,
+      "taperRatio": 1.3001,
+      "lowerDominance": 0.187,
+      "meanSmileBias": 0.7992,
+      "interEyeThicknessDiff": 0
+    },
+    {
+      "value": 0.94,
+      "areaApprox": 0.5625,
+      "centerThickness": 0.2493,
+      "taperRatio": 1.2266,
+      "lowerDominance": 0.1932,
+      "meanSmileBias": 0.8318,
+      "interEyeThicknessDiff": 0
+    },
+    {
+      "value": 0.96,
+      "areaApprox": 0.4994,
+      "centerThickness": 0.2308,
+      "taperRatio": 1.1321,
+      "lowerDominance": 0.1994,
+      "meanSmileBias": 0.8625,
+      "interEyeThicknessDiff": 0
+    },
+    {
+      "value": 0.98,
+      "areaApprox": 0.4416,
+      "centerThickness": 0.216,
+      "taperRatio": 1.015,
+      "lowerDominance": 0.2058,
+      "meanSmileBias": 0.8909,
+      "interEyeThicknessDiff": 0
+    },
+    {
+      "value": 1,
+      "areaApprox": 0.3902,
+      "centerThickness": 0.2051,
+      "taperRatio": 0.8783,
+      "lowerDominance": 0.2122,
+      "meanSmileBias": 0.9166,
+      "interEyeThicknessDiff": 0
+    }
+  ],
+  "smileRegime": {
+    "firstLowerDominantSmile": 0.56,
+    "firstShaderSmileBandActivation": 0.34,
+    "firstHighTaperSmile": 0.78,
+    "steepestCenterThicknessDrop": {
+      "delta": -0.0822,
+      "from": 0.5,
+      "to": 0.52
+    }
+  },
+  "axisClassification": {
+    "openness": "primary aperture axis",
+    "squint": "tension and compression axis",
+    "smile": "lower-driven narrowing axis with nonlinear extreme regime",
+    "roundness": "secondary width and softness axis",
+    "slant": "directional inner-vs-outer redistribution axis",
+    "asymmetry": "inter-eye balance axis",
+    "spacing": "layout-only axis",
+    "gaze_x": "appearance-only gaze axis",
+    "gaze_y": "appearance-only gaze axis",
+    "glow": "appearance-only emissive axis",
+    "warmth": "appearance-only color axis"
+  },
+  "extremeSmileAnchor": {
+    "vector": {
+      "openness": 0.65,
+      "squint": 0.12,
+      "smile": 0.88,
+      "roundness": 0.22,
+      "slant": 0,
+      "asymmetry": 0,
+      "spacing": 0.46,
+      "gaze_x": 0,
+      "gaze_y": -0.02,
+      "glow": 1,
+      "warmth": 0.3
+    },
+    "metrics": {
+      "areaApprox": 0.7819,
+      "meanThickness": 0.4108,
+      "centerThickness": 0.3244,
+      "edgeThickness": 0.4525,
+      "taperRatio": 1.3948,
+      "lowerDominance": 0.1748,
+      "meanSmileBias": 0.7286,
+      "meanCenterline": 0.0823,
+      "intraThicknessAsymmetry": 0.0229,
+      "interEyeAreaDiff": 0,
+      "interEyeThicknessDiff": 0,
+      "interEyeCenterlineDiff": 0,
+      "interEyeLowerDominanceDiff": 0,
+      "signedInterEyeArea": 0,
+      "signedInterEyeThickness": 0,
+      "signedInterEyeCenterline": 0,
+      "signedInterEyeLowerDominance": 0
+    },
+    "sensitivities": {
+      "openness": {
+        "areaApprox": {
+          "metric": -0.283,
+          "lowLevel": {
+            "leftLidTop": -0.6192,
+            "leftLidBottom": -0.035,
+            "leftWidth": 0.015
+          }
+        },
+        "centerThickness": {
+          "metric": -0.194,
+          "lowLevel": {
+            "leftLidTop": -0.6192,
+            "leftLidBottom": -0.035,
+            "leftWidth": 0.015
+          }
+        },
+        "taperRatio": {
+          "metric": 0.442,
+          "lowLevel": {
+            "leftLidTop": -0.6192,
+            "leftLidBottom": -0.035,
+            "leftWidth": 0.015
+          }
+        },
+        "lowerDominance": {
+          "metric": 0.5842,
+          "lowLevel": {
+            "leftLidTop": -0.6192,
+            "leftLidBottom": -0.035,
+            "leftWidth": 0.015
+          }
+        },
+        "meanSmileBias": {
+          "metric": 0.4996,
+          "lowLevel": {
+            "leftLidTop": -0.6192,
+            "leftLidBottom": -0.035,
+            "leftWidth": 0.015
+          }
+        }
+      },
+      "squint": {
+        "areaApprox": {
+          "metric": -0.6373,
+          "lowLevel": {
+            "leftLidTop": 0.2292,
+            "leftLidBottom": 0.07,
+            "leftWidth": -0.06
+          }
+        },
+        "centerThickness": {
+          "metric": -0.2033,
+          "lowLevel": {
+            "leftLidTop": 0.2292,
+            "leftLidBottom": 0.07,
+            "leftWidth": -0.06
+          }
+        },
+        "taperRatio": {
+          "metric": -0.4683,
+          "lowLevel": {
+            "leftLidTop": 0.2292,
+            "leftLidBottom": 0.07,
+            "leftWidth": -0.06
+          }
+        },
+        "lowerDominance": {
+          "metric": -0.1592,
+          "lowLevel": {
+            "leftLidTop": 0.2292,
+            "leftLidBottom": 0.07,
+            "leftWidth": -0.06
+          }
+        },
+        "meanSmileBias": {
+          "metric": 0.157,
+          "lowLevel": {
+            "leftLidTop": 0.2292,
+            "leftLidBottom": 0.07,
+            "leftWidth": -0.06
+          }
+        }
+      },
+      "roundness": {
+        "areaApprox": {
+          "metric": -0.3915,
+          "lowLevel": {
+            "leftLidTop": 0.0017,
+            "leftLidBottom": 0.0302,
+            "leftWidth": -0.16
+          }
+        },
+        "centerThickness": {
+          "metric": -0.1452,
+          "lowLevel": {
+            "leftLidTop": 0.0017,
+            "leftLidBottom": 0.0302,
+            "leftWidth": -0.16
+          }
+        },
+        "taperRatio": {
+          "metric": -0.1604,
+          "lowLevel": {
+            "leftLidTop": 0.0017,
+            "leftLidBottom": 0.0302,
+            "leftWidth": -0.16
+          }
+        },
+        "lowerDominance": {
+          "metric": 0.0285,
+          "lowLevel": {
+            "leftLidTop": 0.0017,
+            "leftLidBottom": 0.0302,
+            "leftWidth": -0.16
+          }
+        },
+        "meanSmileBias": {
+          "metric": 0.1794,
+          "lowLevel": {
+            "leftLidTop": 0.0017,
+            "leftLidBottom": 0.0302,
+            "leftWidth": -0.16
+          }
+        }
+      }
+    }
+  }
+}

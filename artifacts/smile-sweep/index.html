@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Smile Sweep</title>
+    <style>
+      :root {
+        color-scheme: dark;
+        --bg: #070707;
+        --panel: #101010;
+        --line: #222;
+        --text: #f3f3f3;
+        --muted: #9a9a9a;
+      }
+      body {
+        margin: 0;
+        padding: 24px;
+        background: radial-gradient(circle at top, #121212, var(--bg) 58%);
+        color: var(--text);
+        font: 14px/1.4 Consolas, "SFMono-Regular", monospace;
+      }
+      h1 {
+        margin: 0 0 8px;
+        font-size: 18px;
+      }
+      h2 {
+        margin: 0 0 8px;
+        font-size: 15px;
+      }
+      p {
+        margin: 0 0 20px;
+        color: var(--muted);
+      }
+      section {
+        margin-bottom: 28px;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 16px;
+      }
+      .card {
+        margin: 0;
+        border: 1px solid var(--line);
+        background: linear-gradient(180deg, #121212, var(--panel));
+        padding: 10px;
+      }
+      img {
+        width: 100%;
+        display: block;
+        background: #000;
+      }
+      figcaption {
+        margin-top: 8px;
+        color: var(--muted);
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Smile Sweep</h1>
+    <section>
+      <h2>Raw smile axis</h2>
+      <p>Only <code>smile</code> changes. Everything else stays fixed at the baseline vector.</p>
+      <div class="grid">
+        <figure class="card"><img src="./axis-smile-0_00.png" alt="smile=0.00" /><figcaption>smile=0.00</figcaption></figure>
+<figure class="card"><img src="./axis-smile-0_14.png" alt="smile=0.14" /><figcaption>smile=0.14</figcaption></figure>
+<figure class="card"><img src="./axis-smile-0_28.png" alt="smile=0.28" /><figcaption>smile=0.28</figcaption></figure>
+<figure class="card"><img src="./axis-smile-0_42.png" alt="smile=0.42" /><figcaption>smile=0.42</figcaption></figure>
+<figure class="card"><img src="./axis-smile-0_56.png" alt="smile=0.56" /><figcaption>smile=0.56</figcaption></figure>
+<figure class="card"><img src="./axis-smile-0_70.png" alt="smile=0.70" /><figcaption>smile=0.70</figcaption></figure>
+<figure class="card"><img src="./axis-smile-0_82.png" alt="smile=0.82" /><figcaption>smile=0.82</figcaption></figure>
+<figure class="card"><img src="./axis-smile-0_88.png" alt="smile=0.88" /><figcaption>smile=0.88</figcaption></figure>
+<figure class="card"><img src="./axis-smile-0_94.png" alt="smile=0.94" /><figcaption>smile=0.94</figcaption></figure>
+      </div>
+    </section>
+    <section>
+      <h2>Happy path through compact space</h2>
+      <p><code>smile</code>, <code>openness</code>, <code>roundness</code>, <code>warmth</code>, and a small amount of <code>squint</code> move together along one trajectory.</p>
+      <div class="grid">
+        <figure class="card"><img src="./path-smile-0_00.png" alt="progress=0.00" /><figcaption>progress=0.00</figcaption></figure>
+<figure class="card"><img src="./path-smile-0_12.png" alt="progress=0.12" /><figcaption>progress=0.12</figcaption></figure>
+<figure class="card"><img src="./path-smile-0_24.png" alt="progress=0.24" /><figcaption>progress=0.24</figcaption></figure>
+<figure class="card"><img src="./path-smile-0_38.png" alt="progress=0.38" /><figcaption>progress=0.38</figcaption></figure>
+<figure class="card"><img src="./path-smile-0_52.png" alt="progress=0.52" /><figcaption>progress=0.52</figcaption></figure>
+<figure class="card"><img src="./path-smile-0_66.png" alt="progress=0.66" /><figcaption>progress=0.66</figcaption></figure>
+<figure class="card"><img src="./path-smile-0_78.png" alt="progress=0.78" /><figcaption>progress=0.78</figcaption></figure>
+<figure class="card"><img src="./path-smile-0_90.png" alt="progress=0.90" /><figcaption>progress=0.90</figcaption></figure>
+<figure class="card"><img src="./path-smile-1_00.png" alt="progress=1.00" /><figcaption>progress=1.00</figcaption></figure>
+      </div>
+    </section>
+  </body>
+</html>

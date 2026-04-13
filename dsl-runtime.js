@@ -48,15 +48,15 @@ export const PRESETS = {
   IDLE: DEFAULT_IDLE_DSL,
   HAPPY: `face:
   mode: compact
-  openness: 0.73 + 0.026*sin(time * 0.34) + 0.012*sin(time * 1.24 + 0.5)
-  squint: 0.12 + 0.03*abs(sin(time * 0.29 + 1.1))
-  smile: 0.62 + 0.05*sin(time * 0.41 + 0.3) + 0.02*sin(time * 1.08)
-  roundness: 0.18 + 0.02*sin(time * 0.22 + 2.4)
-  slant: -0.03 + 0.016*sin(time * 0.15 + 1.2)
-  asymmetry: 0.02*sin(time * 0.18 + 0.4)
-  gaze: [0.03*sin(time * 0.25) + 0.012*sin(time * 1.6), -0.07 + 0.018*sin(time * 0.28 + 1.3)]
-  glow: 0.92 + 0.04*abs(sin(time * 0.86)) + 0.03*sin(time * 0.42)
-  warmth: 0.55`,
+  openness: 0.79 + 0.022*sin(time * 0.34) + 0.01*sin(time * 1.12 + 0.5)
+  squint: 0.055 + 0.018*abs(sin(time * 0.26 + 1.1))
+  smile: 0.46 + 0.04*sin(time * 0.39 + 0.3) + 0.014*sin(time * 1.06)
+  roundness: 0.22 + 0.018*sin(time * 0.2 + 2.4)
+  slant: -0.004 + 0.008*sin(time * 0.14 + 1.2)
+  asymmetry: 0.012*sin(time * 0.18 + 0.4)
+  gaze: [0.026*sin(time * 0.24) + 0.01*sin(time * 1.42), -0.045 + 0.014*sin(time * 0.26 + 1.3)]
+  glow: 0.9 + 0.03*abs(sin(time * 0.78)) + 0.02*sin(time * 0.38)
+  warmth: 0.52`,
   ANGRY: `face:
   left:
     lid_top: 0.32
@@ -128,14 +128,14 @@ export const PRESETS = {
   warmth: 0.28`,
   CARET_SMILE: `face:
   mode: compact
-  openness: 0.42 + 0.02*sin(time * 0.45 + 0.3)
-  squint: 0.44 + 0.03*abs(sin(time * 0.62))
-  smile: 0.88 + 0.03*sin(time * 0.9 + 0.2)
-  roundness: 0.34 + 0.02*sin(time * 0.38 + 1.2)
-  slant: 0.02
-  asymmetry: 0.018*sin(time * 0.55 + 0.5)
-  gaze: [0.0, -0.08]
-  glow: 0.98 + 0.05*abs(sin(time * 0.72))
+  openness: 0.38 + 0.014*sin(time * 0.42 + 0.3)
+  squint: 0.34 + 0.02*abs(sin(time * 0.58))
+  smile: 0.94 + 0.02*sin(time * 0.8 + 0.2)
+  roundness: 0.52 + 0.015*sin(time * 0.34 + 1.2)
+  slant: 0.0
+  asymmetry: 0.006*sin(time * 0.45 + 0.5)
+  gaze: [0.0, -0.04]
+  glow: 0.98 + 0.04*abs(sin(time * 0.68))
   warmth: 0.58`,
   TRANSIENT_ALERT: `behavior:
   kind: transient
@@ -648,15 +648,19 @@ function mapCompactChannelsToFace(compact) {
     const upperAnger = Math.max(0, -compact.slant) * 0.24;
     const upperSadness = Math.max(0, compact.slant) * 0.22;
     const lowerBase = compact.squint * 0.07 + (1 - open) * 0.035;
-    const lowerSmileInner = compact.smile * 0.2;
-    const lowerSmileOuter = compact.smile * 0.36;
-    const smileArc = smoothstep(0.52, 0.92, compact.smile);
-    const smilePinch = smileArc * (0.16 + compact.roundness * 0.08 + compact.squint * 0.1);
-    const smileLift = smileArc * (0.13 + compact.roundness * 0.06);
-    const upperInner = clamp(topBase + upperAnger * 0.95 + compact.squint * 0.08 + smilePinch * 0.56, 0, 1);
-    const upperOuter = clamp(topBase * 0.72 + upperSadness + compact.smile * 0.08 + smilePinch * 0.82, 0, 1);
-    const lowerInner = clamp(lowerBase + lowerSmileInner + compact.roundness * 0.03 + smileLift * 0.86, 0, 1);
-    const lowerOuter = clamp(lowerBase + lowerSmileOuter + compact.roundness * 0.045 + smileLift * 1.15, 0, 1);
+    const smileEase = smoothstep(0.18, 0.78, compact.smile);
+    const smileArc = smoothstep(0.48, 0.84, compact.smile);
+    const smilePeak = smoothstep(0.82, 0.98, compact.smile);
+    const roundSoft = compact.roundness * (1 - smilePeak * 0.72);
+    const lowerSmileInner = compact.smile * 0.31 + smileEase * 0.05;
+    const lowerSmileOuter = compact.smile * 0.34 + smileEase * 0.06;
+    const smileUpperSoft = smileArc * (0.028 + compact.roundness * 0.012);
+    const smileLift = smileArc * (0.07 + compact.roundness * 0.018);
+    const smileTaper = smilePeak * (0.018 + (1 - compact.roundness) * 0.01);
+    const upperInner = clamp(topBase + upperAnger * 0.95 + compact.squint * 0.08 + smileUpperSoft * 0.12, 0, 1);
+    const upperOuter = clamp(topBase * 0.72 + upperSadness + compact.smile * 0.008 + smileUpperSoft * 0.16, 0, 1);
+    const lowerInner = clamp(lowerBase + lowerSmileInner + roundSoft * 0.018 + smileLift * 0.8 + smileTaper * 0.06, 0, 1);
+    const lowerOuter = clamp(lowerBase + lowerSmileOuter + roundSoft * 0.022 + smileLift * 0.86 + smileTaper * 0.05, 0, 1);
 
     return {
       lidTop: clampParam("lid_top", (upperInner + upperOuter) * 0.5),
@@ -668,7 +672,12 @@ function mapCompactChannelsToFace(compact) {
       tilt: clampParam("tilt", compact.slant * side * 0.3),
       width: clampParam(
         "width",
-        1.02 + compact.smile * 0.02 - compact.roundness * 0.31 - compact.squint * 0.08 + open * 0.02 - smileArc * 0.14,
+        1.0
+          - smileEase * 0.06
+          - smilePeak * 0.10
+          - compact.roundness * (0.22 - smileArc * 0.06)
+          - compact.squint * 0.06
+          + open * 0.015,
       ),
     };
   }
@@ -1237,5 +1246,40 @@ export function createBehaviorEngine() {
     getLiveOutput(face) {
       return serializeLiveFace(face, engineState.inputs, face.overlayState);
     },
+  };
+}
+
+export function evaluateBehaviorTextAt(
+  text,
+  {
+    time = 0,
+    inputs = { energy: 0.2, presence: 0.4, arousal: 0.25 },
+    startTime = 0,
+  } = {},
+) {
+  const parsed = parseBehaviorText(text);
+  const meta = readBehaviorMeta(parsed);
+  const compiled = compileBehavior(parsed, text);
+  const engineState = {
+    inputs: {
+      energy: inputs.energy ?? 0.2,
+      presence: inputs.presence ?? 0.4,
+      arousal: inputs.arousal ?? 0.25,
+    },
+    lastInputChangeTime: startTime,
+  };
+  const behaviorState = meta.kind === "transient"
+    ? {
+        startTime,
+        attack: meta.attack,
+        hold: meta.hold,
+        release: meta.release,
+        presetName: "ANALYSIS",
+      }
+    : null;
+
+  return {
+    meta,
+    face: compiled.evaluate(engineState, time, behaviorState),
   };
 }
