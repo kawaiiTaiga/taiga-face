@@ -13,11 +13,33 @@
       <aside class="control-panel" id="control-panel">
         <div class="panel-header">
           <div>
-            <p class="eyebrow">Local Runtime</p>
-            <h1>EVE-Lite x HAMPTER</h1>
+            <p class="eyebrow">LLM Formula Runtime</p>
+            <h1>TAIGA Face Expression Runtime</h1>
+            <p class="panel-intro">
+              The point of this system is not just that a face runs in the browser. The point is that an LLM can
+              describe expression behavior as formulas and this runtime can execute them.
+            </p>
           </div>
           <button id="toggle-panel" class="ghost-button" type="button">Hide</button>
         </div>
+
+        <section class="panel-section">
+          <div class="section-heading">
+            <h2>LLM Prompt</h2>
+            <button id="copy-prompt" class="primary-button" type="button">Copy Prompt</button>
+          </div>
+          <p class="helper-text">
+            Copy this prompt into an LLM, append your request, then paste the returned YAML into the DSL editor below.
+          </p>
+          <div class="workflow-strip" aria-label="Usage flow">
+            <span>1. Copy prompt</span>
+            <span>2. Ask LLM</span>
+            <span>3. Paste YAML</span>
+            <span>4. Run face</span>
+          </div>
+          <pre id="llm-prompt" class="prompt-block">Loading prompt...</pre>
+          <p id="prompt-status" class="helper-text">Current canonical prompt source: <code>transient-dsl-prompt.md</code></p>
+        </section>
 
         <section class="panel-section">
           <div class="section-heading">

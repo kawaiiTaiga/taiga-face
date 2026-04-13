@@ -13,6 +13,9 @@ const parseMessage = document.querySelector("#parse-message");
 const runtimeStatus = document.querySelector("#runtime-status");
 const liveOutput = document.querySelector("#live-output");
 const resetInputsButton = document.querySelector("#reset-inputs");
+const promptBlock = document.querySelector("#llm-prompt");
+const promptStatus = document.querySelector("#prompt-status");
+const copyPromptButton = document.querySelector("#copy-prompt");
 
 const sliderElements = {
   energy: document.querySelector("#energy-input"),
@@ -28,10 +31,16 @@ const sliderOutputs = {
 
 const engine = createBehaviorEngine();
 const renderer = createRenderer(canvas);
+let canonicalPromptText = "";
 
 function setParseMessage(message, isError = false) {
   parseMessage.textContent = message;
   parseMessage.classList.toggle("error", isError);
+}
+
+function setPromptStatus(message, isError = false) {
+  promptStatus.textContent = message;
+  promptStatus.classList.toggle("error", isError);
 }
 
 function setActivePreset(name) {
@@ -111,6 +120,20 @@ function bindUi() {
     updateSliderOutputs();
   });
 
+  copyPromptButton.addEventListener("click", async () => {
+    if (!canonicalPromptText) {
+      setPromptStatus("Prompt not loaded yet.", true);
+      return;
+    }
+
+    try {
+      await navigator.clipboard.writeText(canonicalPromptText);
+      setPromptStatus("Prompt copied. Ask the LLM for YAML, then paste it below.");
+    } catch (error) {
+      setPromptStatus("Copy failed. Select the prompt text manually.", true);
+    }
+  });
+
   for (const [name, input] of Object.entries(sliderElements)) {
     input.addEventListener("input", () => {
       engine.setInput(name, Number(input.value));
@@ -119,11 +142,29 @@ function bindUi() {
   }
 }
 
+async function loadCanonicalPrompt() {
+  try {
+    const response = await fetch("./transient-dsl-prompt.md", { cache: "no-store" });
+    if (!response.ok) {
+      throw new Error("Prompt file missing.");
+    }
+
+    canonicalPromptText = await response.text();
+    promptBlock.textContent = canonicalPromptText;
+    setPromptStatus("Copy this prompt into an LLM, then append your expression request.");
+  } catch (error) {
+    canonicalPromptText = "";
+    promptBlock.textContent = "Prompt file could not be loaded.";
+    setPromptStatus("Prompt file could not be loaded.", true);
+  }
+}
+
 function start() {
   buildPresetButtons();
   bindUi();
   engine.initialize();
   dslInput.value = PRESETS.IDLE;
+  loadCanonicalPrompt();
 
   const params = new URLSearchParams(window.location.search);
   const presetParam = params.get("preset");

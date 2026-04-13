@@ -104,6 +104,14 @@ body::before {
   align-items: flex-start;
 }
 
+.panel-intro {
+  margin-top: 10px;
+  color: var(--text-1);
+  font-size: 0.92rem;
+  line-height: 1.5;
+  max-width: 32rem;
+}
+
 .eyebrow {
   margin: 0 0 4px;
   color: var(--accent);
@@ -144,6 +152,22 @@ h2 {
 
 .panel-section.compact {
   min-height: 0;
+}
+
+.workflow-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.workflow-strip span {
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(140, 239, 255, 0.12);
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--text-1);
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
 }
 
 .preset-grid {
@@ -220,6 +244,13 @@ pre {
   background: rgba(1, 8, 12, 0.72);
   color: var(--text-0);
   font-family: Consolas, "Cascadia Code", monospace;
+}
+
+.prompt-block {
+  min-height: 240px;
+  max-height: 320px;
+  white-space: pre-wrap;
+  word-break: break-word;
 }
 
 textarea {
