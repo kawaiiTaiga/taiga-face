@@ -62,6 +62,10 @@ vec3 evePalette(float warmth) {
   return vec3(1.0);
 }
 
+float aaWidth(float value) {
+  return max(fwidth(value) * 1.35, 0.010);
+}
+
 EyeRender renderEye(
   vec2 uv,
   float eyeCenterX,
@@ -92,72 +96,69 @@ EyeRender renderEye(
   vec2 gazeOffset = vec2(gazeX, gazeY);
 
   float innerMix = smoothstep(-0.72, 0.72, q.x * (-side));
-  float upperInnerCombined = clamp(mix(lidTop, upperInner, 0.74), 0.0, 1.0);
-  float upperOuterCombined = clamp(mix(lidTop, upperOuter, 0.74), 0.0, 1.0);
-  float lowerInnerCombined = clamp(mix(lidBottom, lowerInner, 0.74), 0.0, 1.0);
-  float lowerOuterCombined = clamp(mix(lidBottom, lowerOuter, 0.74), 0.0, 1.0);
-  float upperClosure = mix(upperOuterCombined, upperInnerCombined, innerMix);
-  float lowerClosure = mix(lowerOuterCombined, lowerInnerCombined, innerMix);
-  float meanUpperClosure = 0.5 * (upperInnerCombined + upperOuterCombined);
-  float meanLowerClosure = 0.5 * (lowerInnerCombined + lowerOuterCombined);
+  float upperClosure = mix(clamp(upperOuter, 0.0, 1.0), clamp(upperInner, 0.0, 1.0), innerMix);
+  float lowerClosure = mix(clamp(lowerOuter, 0.0, 1.0), clamp(lowerInner, 0.0, 1.0), innerMix);
+  float meanUpperClosure = 0.5 * (clamp(upperInner, 0.0, 1.0) + clamp(upperOuter, 0.0, 1.0));
+  float meanLowerClosure = 0.5 * (clamp(lowerInner, 0.0, 1.0) + clamp(lowerOuter, 0.0, 1.0));
   float smileCarrier = clamp((meanLowerClosure - meanUpperClosure * 0.16 - 0.02) * 2.6, 0.0, 1.0);
-  float tightness = clamp(max(meanUpperClosure, meanLowerClosure), 0.0, 1.0);
-  float smileBias = smoothstep(0.16, 0.62, smileCarrier);
+  float smileBlend = smoothstep(0.18, 0.56, smileCarrier);
+  upperClosure = mix(upperClosure, meanUpperClosure, smileBlend * 0.68);
+  lowerClosure = mix(lowerClosure, meanLowerClosure, smileBlend * 0.68);
+  float localSmileSignal = lowerClosure - upperClosure * 0.22 + (1.0 - abs(q.x)) * 0.04;
+  float globalSmileSignal = meanLowerClosure - meanUpperClosure * 0.18 + (1.0 - abs(q.x)) * 0.055;
+  float smileSignal = mix(localSmileSignal, globalSmileSignal, smileBlend * 0.72);
+  float smileBias = max(smoothstep(0.26, 0.48, smileSignal), smileBlend * 0.52);
+  float stableSmileBias = smoothstep(0.22, 0.74, smileBias);
 
-  float xi = q.x * (-side);
-  float span = mix(1.03, 0.74, clamp((1.0 - width) * 0.7 + smileBias * 0.92, 0.0, 1.0));
-  float xn = clamp(xi / span, -1.2, 1.2);
-  float x2 = xn * xn;
+  float browTilt = tilt * q.x * 0.42;
+  float topArc = mix(1.26, -0.84, upperClosure)
+    + pow(abs(q.x), 1.85) * 0.08
+    + browTilt;
+  float bottomArc = mix(-1.24, 0.82, lowerClosure)
+    - pow(abs(q.x), 1.85) * 0.06
+    + browTilt * 0.18;
+  float smileSpan = mix(1.0, 0.84, stableSmileBias);
+  float smileX = q.x / smileSpan;
+  float x2 = smileX * smileX;
   float smileCore = max(0.0, 1.0 - x2);
-  float taperP = mix(1.28, 1.98, clamp(0.32 + tightness * 0.52 + smileBias * 0.34, 0.0, 1.0));
-  float taperK = mix(0.74, 1.18, clamp(tightness * 0.48 + (1.0 - smileBias) * 0.16, 0.0, 1.0));
-  float taperBase = max(0.0, 1.0 - pow(abs(xn), taperP));
-  float taper = pow(taperBase, taperK);
+  float smileCap = pow(smileCore, 0.78);
+  float smileBelly = pow(smileCore, 1.20);
+  float smileCurve = 0.044
+    + smileCap * 0.056
+    - x2 * 0.080
+    - x2 * x2 * 0.105
+    + browTilt * 0.010;
+  float smileThickness = mix(0.172, 0.112, stableSmileBias) * (0.18 + smileBelly * 0.82);
+  float smileTop = smileCurve + smileThickness * 0.82 + smileCap * 0.004;
+  float smileBottom = smileCurve - smileThickness * 0.60 - stableSmileBias * 0.012 - smileBelly * 0.005;
+  topArc = mix(topArc, smileTop, stableSmileBias);
+  bottomArc = mix(bottomArc, smileBottom, stableSmileBias);
 
-  float upperDiff = upperInnerCombined - upperOuterCombined;
-  float lowerDiff = lowerInnerCombined - lowerOuterCombined;
-  float angerBias = max(0.0, meanUpperClosure - meanLowerClosure * 0.72);
-  float archShape = smileCore * (1.0 - 0.22 * x2);
-  float baseCurve = (0.018 - angerBias * 0.02) * smileCore;
-  float archLift = smileBias * (0.14 + meanLowerClosure * 0.16);
-  float center = -0.012
-    + baseCurve
-    + archLift * archShape
-    + tilt * xn * 0.18
-    + tilt * xn * x2 * 0.03
-    + (lowerDiff - upperDiff) * xn * 0.018;
+  float topAA = aaWidth(q.y - topArc);
+  float bottomAA = aaWidth(q.y - bottomArc);
+  float topMask = 1.0 - smoothstep(topArc - topAA, topArc + topAA, q.y);
+  float bottomMask = smoothstep(bottomArc - bottomAA, bottomArc + bottomAA, q.y);
+  float lidMask = topMask * bottomMask;
 
-  float upperBase = mix(0.96, 0.09, clamp(meanUpperClosure * 1.02 + smileBias * 0.12, 0.0, 1.0));
-  float lowerBase = mix(0.92, 0.06, clamp(meanLowerClosure * 1.02 + smileBias * 0.05, 0.0, 1.0));
-  float upperCurve = 0.09 + 0.07 * tightness + 0.08 * smileBias;
-  float lowerCurve = 0.08 + 0.06 * tightness + 0.05 * smileBias;
-  float upperThickness = taper * max(
-    0.014,
-    (upperBase
-      - x2 * upperCurve
-      - xn * upperDiff * 0.12) * mix(1.0, 0.50, smileBias)
-      + smileBias * 0.006 * archShape
-  );
-  float lowerThickness = taper * max(
-    0.014,
-    (lowerBase
-      - x2 * lowerCurve
-      - xn * lowerDiff * 0.10) * mix(1.0, 0.44, smileBias)
-      + smileBias * 0.016 * pow(smileCore, 0.62)
-  );
+  float baseAA = aaWidth(eDist);
+  float baseShape = 1.0 - smoothstep(-baseAA, baseAA, eDist);
+  float baseVisibleMask = baseShape * lidMask;
+  float baseInterior = smoothstep(baseAA * 0.55, -baseAA * 1.8, eDist) * lidMask;
+  float baseEdgeBand = smoothstep(baseAA * 1.3, baseAA * 0.05, eDist) - smoothstep(-baseAA * 0.15, -baseAA * 2.0, eDist);
 
-  float top = center + upperThickness;
-  float bottom = center - lowerThickness;
-  float horizontalDist = abs(xi) - span;
-  float verticalDist = max(q.y - top, bottom - q.y);
-  float surfaceDist = max(horizontalDist, verticalDist);
-  float shapeWindow = 1.0 - smoothstep(1.02, 1.18, abs(xn));
-  float visibleMask = (1.0 - smoothstep(-0.006, 0.020, surfaceDist)) * shapeWindow;
-  float interior = smoothstep(0.010, -0.024, surfaceDist) * shapeWindow;
-  float edgeBand = (
-    smoothstep(0.018, 0.002, surfaceDist)
-    - smoothstep(-0.004, -0.028, surfaceDist)
-  ) * shapeWindow;
+  float smileBandDist = abs(q.y - smileCurve) - smileThickness;
+  float smileAA = aaWidth(smileBandDist);
+  float smileDomain = 1.0 - smoothstep(0.92, 1.03, abs(smileX));
+  float smileMask = (1.0 - smoothstep(-smileAA * 0.3, smileAA * 1.2, smileBandDist)) * smileDomain;
+  float smileInterior = smoothstep(smileAA * 0.4, -smileAA * 1.3, smileBandDist) * smileDomain;
+  float smileEdgeBand = smoothstep(smileAA * 0.95, smileAA * 0.05, smileBandDist) - smoothstep(-smileAA * 0.2, -smileAA * 1.6, smileBandDist);
+  float smileShapeBlend = smoothstep(0.54, 0.86, stableSmileBias);
+
+  float visibleMask = mix(baseVisibleMask, smileMask, smileShapeBlend);
+  float interior = mix(baseInterior, smileInterior, smileShapeBlend);
+  float edgeBand = mix(baseEdgeBand, smileEdgeBand, smileShapeBlend);
+  float surfaceDist = mix(eDist, smileBandDist, smileShapeBlend);
+  float shape = mix(baseShape, smileMask, smileShapeBlend);
 
   float centerBright = exp(-1.2 * dot(q - gazeOffset, q - gazeOffset));
   float focus = exp(-7.5 * dot((q - gazeOffset * 1.12) * vec2(1.0, 1.35), (q - gazeOffset * 1.12) * vec2(1.0, 1.35)));
@@ -169,11 +170,11 @@ EyeRender renderEye(
   float lowerLift = 1.0 - smoothstep(0.02, 0.82, abs(q.y + 0.26));
   float soulBias = 0.84 + innerBias * 0.10 + lowerLift * 0.10;
   float innerReflect = exp(-120.0 * pow(q.y + 0.18, 2.0)) * exp(-2.5 * pow(q.x + side * 0.10, 2.0));
-  float glassEdge = exp(-28.0 * abs(surfaceDist + 0.01)) * shapeWindow;
+  float glassEdge = exp(-28.0 * abs(surfaceDist + 0.01)) * mix(lidMask, 1.0, smileShapeBlend);
 
   float fillField = interior * (0.58 + centerBright * 0.18 + rim * 0.10) * edgeFade * lcdBands * lcdCols * soulBias;
   float coreField = visibleMask * (focus * 0.88 + centerBright * 0.10) * soulBias;
-  float outerGlow = exp(-5.0 * max(surfaceDist, 0.0)) * shapeWindow * (0.14 + centerBright * 0.12);
+  float outerGlow = exp(-5.1 * max(surfaceDist, 0.0)) * mix(lidMask, 1.0, smileShapeBlend) * (0.14 + centerBright * 0.12);
 
   EyeRender eye;
   eye.mask = visibleMask;
@@ -224,7 +225,8 @@ vec3 renderScene(vec2 uv) {
   float core = (leftEye.core + rightEye.core) * (0.38 + u_glow * 0.18);
   float shell = (leftEye.mask + rightEye.mask) * 0.010 * u_glow;
   float eyeInk = max(fill * 0.95 + core * 0.8 + shell * 0.5, max(leftEye.mask, rightEye.mask) * 0.22);
-  float bw = step(0.18, eyeInk + glow * 0.02);
+  float inkAA = aaWidth(eyeInk - 0.18);
+  float bw = smoothstep(0.18 - inkAA, 0.18 + inkAA, eyeInk + glow * 0.02);
   return vec3(bw);
 }
 
@@ -238,7 +240,9 @@ void main() {
   color.b = renderScene(centered - vec2(split, 0.0)).b;
 
   float glitchBand = step(0.18, 1.0 - smoothstep(0.0, 0.42, abs(fract(centered.y * 3.0 + u_time * 2.6) - 0.5)));
-  float bw = step(0.5, max(max(color.r, color.g), color.b) + u_glitch * glitchBand * 0.5);
+  float sceneInk = max(max(color.r, color.g), color.b) + u_glitch * glitchBand * 0.5;
+  float sceneAA = aaWidth(sceneInk - 0.5);
+  float bw = smoothstep(0.5 - sceneAA, 0.5 + sceneAA, sceneInk);
   outColor = vec4(vec3(bw), 1.0);
 }`;
 

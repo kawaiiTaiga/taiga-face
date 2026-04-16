@@ -1131,15 +1131,18 @@ export function createBehaviorEngine() {
     const autonomousGaze = gazeSample.value;
     const topBoost = blinkAmount;
     const bottomBoost = blinkAmount * 0.16;
-    const baseMotionWeight = engineState.basePreset === "IDLE" ? 1.0 : 0.42;
+    const baseMotionWeight = engineState.basePreset === "IDLE" ? 1.0 : 0.16;
     const overlayWeight = composed.overlayState?.weight ?? 0;
-    const motionWeight = lerp(baseMotionWeight, 0.34, overlayWeight);
+    const overlaySuppression = smoothstep(0.0, 0.18, overlayWeight);
+    const motionWeight = lerp(baseMotionWeight, 0.03, overlaySuppression);
+    const gazeWeight = lerp(baseMotionWeight, 0.08, overlaySuppression);
+    const widthWeight = composed.overlayState ? 0 : (engineState.basePreset === "IDLE" ? 1.0 : 0.08);
     const breathe = 0.75 + 0.08 * Math.sin(time * 0.6) + 0.04 * Math.sin(time * 1.05);
     const glowLift = (breathe - 0.75) * 0.65;
-    const hoverLid = Math.max(0, Math.sin(time * 0.42 + 0.8)) * 0.018 * motionWeight;
-    const lowerSoft = (0.5 + 0.5 * Math.sin(time * 0.55 + 1.4)) * 0.008 * motionWeight;
+    const hoverLid = Math.max(0, Math.sin(time * 0.42 + 0.8)) * 0.010 * motionWeight;
+    const lowerSoft = (0.5 + 0.5 * Math.sin(time * 0.55 + 1.4)) * 0.005 * motionWeight;
     const blinkLag = blinkSample.mode === "soft" ? 0.08 : 0.14;
-    const innerBias = 0.028 * motionWeight;
+    const innerBias = 0.018 * motionWeight;
 
     return {
       left: {
@@ -1150,7 +1153,7 @@ export function createBehaviorEngine() {
         lowerInner: clampParam("lower_inner", face.left.lowerInner + bottomBoost + lowerSoft + innerBias * 0.5),
         lowerOuter: clampParam("lower_outer", face.left.lowerOuter + bottomBoost * 0.62 + lowerSoft * 0.7),
         tilt: face.left.tilt,
-        width: clampParam("width", face.left.width + Math.sin(time * 0.55) * 0.008 * motionWeight),
+        width: clampParam("width", face.left.width + Math.sin(time * 0.55) * 0.006 * widthWeight),
       },
       right: {
         lidTop: clampParam("lid_top", face.right.lidTop + topBoost + hoverLid),
@@ -1160,12 +1163,12 @@ export function createBehaviorEngine() {
         lowerInner: clampParam("lower_inner", face.right.lowerInner + bottomBoost + lowerSoft + innerBias * 0.5),
         lowerOuter: clampParam("lower_outer", face.right.lowerOuter + bottomBoost * 0.62 + lowerSoft * 0.7),
         tilt: face.right.tilt,
-        width: clampParam("width", face.right.width + Math.sin(time * 0.55 + 0.35) * 0.008 * motionWeight),
+        width: clampParam("width", face.right.width + Math.sin(time * 0.55 + 0.35) * 0.006 * widthWeight),
       },
       spacing: face.spacing,
       gaze: [
-        clampParam("gaze_x", face.gaze[0] + autonomousGaze[0] * motionWeight),
-        clampParam("gaze_y", face.gaze[1] + autonomousGaze[1] * motionWeight),
+        clampParam("gaze_x", face.gaze[0] + autonomousGaze[0] * gazeWeight),
+        clampParam("gaze_y", face.gaze[1] + autonomousGaze[1] * gazeWeight),
       ],
       glow: clampParam("glow", face.glow + glowLift),
       warmth: clampParam("warmth", face.warmth + 0.015 * Math.sin(time * 0.33) * motionWeight),
