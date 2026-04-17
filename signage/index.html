@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HAMPTER Signage Simulator</title>
+  <link rel="stylesheet" href="./styles.css?v=2">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="control-panel">
+      <p class="eyebrow">HAMPTER Reactive Signage</p>
+      <h1>Low-Level Formula Simulator</h1>
+      <p class="intro">
+        글자 채널을 시간 함수로 직접 흔들어보는 최소 시뮬레이터입니다.
+        프리셋은 모두 실제 수식 기반으로 동작합니다.
+      </p>
+
+      <label class="field">
+        <span>Preset</span>
+        <select id="presetSelect"></select>
+      </label>
+
+      <label class="field">
+        <span>Text Override</span>
+        <input id="textOverride" type="text" spellcheck="false" placeholder="Preset text">
+      </label>
+
+      <label class="field">
+        <span>Speed</span>
+        <input id="speedRange" type="range" min="0.2" max="2.5" step="0.1" value="1">
+      </label>
+
+      <div class="button-row">
+        <button id="togglePlayback" type="button">Pause</button>
+        <button id="resetPlayback" type="button">Reset Time</button>
+      </div>
+
+      <section class="meta-card">
+        <h2>Preset Notes</h2>
+        <p id="presetDescription"></p>
+      </section>
+
+      <section class="meta-card">
+        <h2>Available Channels</h2>
+        <p>
+          <code>offset_x</code>, <code>offset_y</code>, <code>scale_x</code>, <code>scale_y</code>,
+          <code>rotation</code>, <code>skew_x</code>, <code>opacity</code>, <code>tracking</code>,
+          <code>glow</code>, <code>blur</code>, <code>brightness</code>
+        </p>
+      </section>
+
+      <section class="meta-card code-card">
+        <div class="code-head">
+          <h2>Preset Source</h2>
+          <span id="statusBadge">Running</span>
+        </div>
+        <pre id="presetCode"></pre>
+      </section>
+    </aside>
+
+    <main class="stage-panel">
+      <div class="stage-frame">
+        <canvas id="stage"></canvas>
+      </div>
+    </main>
+  </div>
+
+  <script src="./app.js?v=2"></script>
+</body>
+</html>
